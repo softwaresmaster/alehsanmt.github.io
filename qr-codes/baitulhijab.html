@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <!-- Start Head -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Syed Ehsan Ul Haq" />
+    <!-- description -->
+    <meta
+      name="QR-Codes"
+      content="UI/UX, Web &amp; App development, Google Maps Location &amp; 360 Photos, Google Reviews, Graphic Designing, contact@alehsanmt.com for more" />
+    <!-- keywords -->
+    <meta
+      name="keywords"
+      content="alehsanmt,sahdigitals,SAH Digitals,virtual tour,360 vr,vr 360, Al-Ehsan, graphic designer, Google Maps Location Services, Graphic Designer, Logo Design, Web Designer, UI/UX designer,360 Photos in Hyderabad, Google reviews, stamp design " />
+
+    <!--Start Title -->
+    <title>Baitul Hijab Review</title>
+    <!--End Title -->
+
+    <!-- Start Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet" />
+
+    <!-- Plugins -->
+    <link href="css\plugins.min.css" rel="stylesheet" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css\style.css" />
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="css\responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+      <style>
+        
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+.rainbow-border {
+	position: relative;
+	z-index: 0;
+	margin: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 2rem;
+	
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-image: conic-gradient(transparent, rgba(168, 239, 255, 1), transparent 30%);
+		animation: rotate 4s linear infinite;
+	}
+	
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: #001a26;
+		border-radius: 5px;
+	}
+}
+
+@keyframes opacityChange {
+	50% {
+		opacity:.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+      
+      </style>
+  </head>
+  <!-- End Head -->
+
+  <!-- Main Body -->
+
+  <body class="hb-color">
+    <!-- Loading Screen -->
+    <div id="loader-wrapper">
+      <!-- Loading Image -->
+      <div class="loader-img">
+        <img src="images\loading-screen.gif" />
+      </div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+
+    <!-- Off-Canvas Navigation -->
+    <div
+      id="offcanvas-nav"
+      data-uk-offcanvas="mode: push; overlay: true; esc-close: true;"></div>
+    <!-- End Off-Canvas Navigation -->
+
+    <!-- Featured Works-->
+    <div class="hb-color padding-top-bottom-50px">
+      <!-- Container -->
+      <div class="container">
+        <!-- Row -->
+        <div
+          class="row"
+          data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: > div ; delay: 150; repeat: false">
+          <!-- Column -->
+          <div
+            class="col-md-8 col-sm-12 col-xs-12 center-col text-center"
+            data-uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div ; delay: 50; repeat: false">
+            <!-- Brand name -->
+            <div class="rainbow-border">
+              <img src="./images/logo.png" alt="Baitul Hijab" />
+            </div>
+            <!-- Separator -->
+            <div
+              class="separator width-30px center-col bottom-border border-2px border-color-gray-dark margin-top-bottom-30px sm-margin-left-right-auto"></div>
+            <div class="d-flex p-1 justify-content-center">
+              <!-- buttons -->
+              <a
+                href="https://api.whatsapp.com/send?phone=+919390564761&text=Hello"
+                class="btn btn-small border-radius-50 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fab fa-whatsapp"></i> Message us on Whatsapp
+              </a>
+            </div>
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="https://www.facebook.com/profile.php?id=100092234121398&mibextid=9R9pXO"
+                class="btn btn-small border-radius-50 me-1 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fab fa-facebook"></i> Follow us on Facebook
+              </a>
+            </div>
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="https://www.instagram.com/baitulhijabofficialhyd"
+                class="btn btn-small border-radius-50 me-1 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fab fa-instagram"></i> Follow us on Instagram
+              </a>
+            </div>
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="https://youtube.com/@BaitulHijab?si=23cCupDS-PAec_Fo"
+                class="btn btn-small border-radius-50 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fab fa-youtube"></i> Subscribe us on YouTube
+              </a>
+            </div>
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="https://search.google.com/local/writereview?placeid=ChIJSa6sYsmXyzsRfpvrh87yiTQ"
+                class="btn btn-small border-radius-50 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fab fa-google"></i> Review us on Google
+              </a>
+            </div>
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="https://maps.google.com/?cid=3785823930639162238&entry=gps"
+                class="btn btn-small border-radius-50 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fa fa-map-marker"></i> Reach us on Maps
+              </a>
+            </div>
+          </div>
+          <!-- End Column -->
+        </div>
+        <div
+          class="separator width-30px center-col bottom-border border-2px border-color-gray-dark margin-top-bottom-30px sm-margin-left-right-auto"></div>
+        <div class="row"> 
+          <div class="center-col">
+            <a>Contact:</a><br />
+            <a href="tel:+919390564761"
+              ><i class="fa fa-phone mr-2"></i>+91 9390 564 761</a
+            ><br />
+            <a href="https://goo.gl/maps/zidQLeeHXBe8stUq9" 
+            >
+          </div>
+        </div>
+        <!-- Seperator -->
+        <div
+          class="separator width-30px center-col bottom-border border-2px border-color-gray-dark margin-top-bottom-30px sm-margin-left-right-auto"></div>
+        <div class="row">
+          <div class="center-col">
+            <a class="p-2"><i class="fab fa-whatsapp"></i></a>
+            <a class="p-2"><i class="fab fa-facebook"></i></a>
+            <a class="p-2"><i class="fab fa-instagram"></i></a>
+            <a class="p-2"><i class="fab fa-youtube"></i></a>
+            <a class="p-2"><i class="fab fa-google"></i></a>
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Container -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Including page fragments-->
+    <script src="js/include.js"></script>
+    <!-- Retina Ready -->
+    <script src="js/plugins.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/custom.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+  </body>
+</html>

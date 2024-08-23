@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <!-- Start Head -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Syed Ehsan Ul Haq" />
+    <!-- description -->
+    <meta
+      name="QR-Codes"
+      content="UI/UX, Web &amp; App development, Google Maps Location &amp; 360 Photos, Google Reviews, QR-Codes Custom Design, Graphic Designing, contact@alehsanmt.com for more" />
+    <!-- keywords -->
+    <meta
+      name="keywords"
+      content="QR-Codes by Al-Ehsan Media &amp; Tech, alehsanmt,sahdigitals,SAH Digitals,virtual tour,360 vr,vr 360, Al-Ehsan, graphic designer, Google Maps Location Services, Graphic Designer, Logo Design, Web Designer, UI/UX designer,360 Photos in Hyderabad, Google reviews, stamp design " />
+
+    <!--Start Title -->
+    <title>Mandi House | QR-Codes by Al-Ehsan Media &amp; Tech</title>
+    <!--End Title -->
+
+    <!-- Start Favicon -->
+    <link rel="shortcut icon" href="/qr-codes/images/mandihouselogo.jpeg" />
+    <link
+      rel="icon"
+      href="/qr-codes/images/mandihouselogo.jpeg"
+      type="image/x-icon" />
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet" />
+
+    <!-- Plugins -->
+    <link href="css\plugins.min.css" rel="stylesheet" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/qr-codes/css/style2.css" />
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="css\responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <style>
+      @keyframes rotate {
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+      .rainbow-border {
+        position: relative;
+        z-index: 0;
+        margin: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 2rem;
+
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: -2;
+          left: -50%;
+          top: -50%;
+          width: 200%;
+          height: 200%;
+          background-color: transparent;
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-image: conic-gradient(
+            transparent,
+            rgb(129, 240, 96),
+            transparent 30%
+          );
+          animation: rotate 4s linear infinite;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          left: 6px;
+          top: 6px;
+          width: calc(100% - 12px);
+          height: calc(100% - 12px);
+          background: #1d211c;
+          border-radius: 5px;
+        }
+      }
+
+      @keyframes opacityChange {
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <!-- End Head -->
+
+  <!-- Main Body -->
+  <body class="h-color">
+    <!-- Loading Screen -->
+    <div id="loader-wrapper">
+      <!-- Loading Image -->
+      <div class="loader-img">
+        <img src="images\loading-screen.gif" />
+      </div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+
+    <!-- Off-Canvas Navigation -->
+    <div
+      id="offcanvas-nav"
+      data-uk-offcanvas="mode: push; overlay: true; esc-close: true;"></div>
+    <!-- End Off-Canvas Navigation -->
+
+    <!-- Featured Works-->
+    <div class="h-color padding-top-bottom-50px">
+      <!-- Container -->
+      <div class="container">
+        <!-- Row -->
+        <div
+          class="row"
+          data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: > div ; delay: 150; repeat: false">
+          <!-- Column -->
+          <div
+            class="col-md-8 col-sm-12 col-xs-12 center-col text-center"
+            data-uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div ; delay: 50; repeat: false">
+            <!-- Brand name -->
+            <div class="rainbow-border">
+              <img src="./images/mandihouselog.png" alt="Mandi House" />
+            </div>
+            <!-- Separator -->
+            <div
+              class="separator width-30px center-col bottom-border border-2px border-color-gray-dark margin-top-bottom-30px sm-margin-left-right-auto"></div>
+            <h5 class="mt-4 text-yellow">Mandi House - Banjara Hills</h5>
+
+            <iframe
+              class="p-1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.9397715684177!2d78.4505933!3d17.414677800000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97c2f834c821%3A0x81fd7ebceee4154c!2sMandi%20House%20Restaurant!5e0!3m2!1sen!2sin!4v1719338712154!5m2!1sen!2sin"
+              width="400"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="d-flex p-2 justify-content-center">
+              <a
+                href="tel:+919849220820"
+                class="btn btn-small border-radius-50 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fa fa-phone"></i> Call us 9849220820
+              </a>
+            </div>
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="https://api.whatsapp.com/send?phone=+919849220820&text=Hello"
+                class="btn btn-small border-radius-50 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fab fa-whatsapp"></i> Message us on Whatsapp
+              </a>
+            </div>
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="https://www.google.com/maps/place/Mandi+House+Restaurant/@17.4146778,78.4480184,17z/data=!4m8!3m7!1s0x3bcb97c2f834c821:0x81fd7ebceee4154c!8m2!3d17.4146778!4d78.4505933!9m1!1b1!16s%2Fg%2F11rlkcd51l?entry=ttu"
+                class="btn btn-small border-radius-50 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fab fa-google"></i> Review us on Google
+              </a>
+            </div>
+
+            <!-- new iframe for new brach -->
+            <div
+              class="separator width-30px center-col bottom-border border-2px border-color-gray-dark margin-top-bottom-30px sm-margin-left-right-auto"></div>
+
+            <h5 class="mt-4 text-yellow">Mandi House - Chandrayangutta</h5>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.736149381701!2d78.48003369999999!3d17.328275099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba2ac0f3b40b9%3A0x1d9a0641de5fa84e!2sMandi%20House!5e0!3m2!1sen!2sin!4v1719339477344!5m2!1sen!2sin"
+              width="400"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="tel:+918341213888"
+                class="btn btn-small border-radius-50 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fa fa-phone"></i> Call us 8341213888
+              </a>
+            </div>
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="https://api.whatsapp.com/send?phone=+918341213888&text=Hello"
+                class="btn btn-small border-radius-50 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fab fa-whatsapp"></i> Message us on Whatsapp
+              </a>
+            </div>
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="https://www.facebook.com/profile.php?id=100063803237500"
+                class="btn btn-small border-radius-50 me-1 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fab fa-facebook"></i> Follow us on Facebook
+              </a>
+            </div>
+
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="https://maps.app.goo.gl/ZWL6hnz25uVutj6v7"
+                class="btn btn-small border-radius-50 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fab fa-google"></i> Review us on Google
+              </a>
+            </div>
+
+            <div
+              class="separator width-30px center-col bottom-border border-2px border-color-gray-dark margin-top-bottom-30px sm-margin-left-right-auto"></div>
+
+            <h5 class="mt-4 text-yellow">Mandi House - Saidabad</h5>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.1733049814106!2d78.5061059!3d17.3553918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9900a675050f%3A0x7c9f3bf45aee4e7b!2sMandi%20House%20Arabian%20Restaurant!5e0!3m2!1sen!2sin!4v1719339437396!5m2!1sen!2sin"
+              width="400"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="tel:+919949113312 "
+                class="btn btn-small border-radius-50 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fa fa-phone"></i> Call us 9949113312
+              </a>
+            </div>
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="https://api.whatsapp.com/send?phone=+919949113312&text=Hello"
+                class="btn btn-small border-radius-50 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fab fa-whatsapp"></i> Message us on Whatsapp
+              </a>
+            </div>
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="https://www.facebook.com/profile.php?id=100057222049301"
+                class="btn btn-small border-radius-50 me-1 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fab fa-facebook"></i> Follow us on Facebook
+              </a>
+            </div>
+
+            <div class="d-flex p-1 justify-content-center">
+              <a
+                href="https://maps.app.goo.gl/c67coPQgr1f9aGtZ7"
+                class="btn btn-small border-radius-50 btn-white sm-display-table active"
+                role="button"
+                aria-pressed="true">
+                <i class="fab fa-google"></i> Review us on Google
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="separator width-30px center-col bottom-border border-2px border-color-gray-dark margin-top-bottom-30px sm-margin-left-right-auto"></div>
+      </div>
+
+      <div class="row">
+        <div class="center-col">
+          <a class="p-2"><i class="fab fa-whatsapp"></i></a>
+          <a class="p-2"><i class="fab fa-facebook"></i></a>
+          <a class="p-2"><i class="fab fa-instagram"></i></a>
+          <a class="p-2"><i class="fab fa-youtube"></i></a>
+          <a class="p-2"><i class="fab fa-google"></i></a>
+        </div>
+      </div>
+      <!-- End Container -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Including page fragments-->
+    <script src="js/include.js"></script>
+    <!-- Retina Ready -->
+    <script src="js/plugins.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/custom.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+  </body>
+</html>
