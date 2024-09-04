@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>ᴋrew4 ᴇvents - Specilized in Events Organizing</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <main>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a href="index.html"
+            ><img class="navbar-logo" src="images/header-logo.svg"
+          /></a>
+
+          <a href="contact.html" class="btn custom-btn d-lg-none ms-auto me-4"
+            >Quick Response</a
+          >
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+              <li class="nav-item">
+                <a class="nav-link click-scroll text-grey" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link click-scroll text-grey" href="virtual.html"
+                  >Virtual</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link click-scroll text-grey" href="about.html"
+                  >About us</a
+                >
+              </li>
+            </ul>
+
+            <a
+              href="contact.html"
+              class="btn custom-btn btn-dark d-lg-block d-none"
+              >Quick Response</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <section class="ticket-section section-padding">
+        <div class="section-overlay"></div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-10 mx-auto">
+              <form
+                class="custom-form ticket-form mb-5 mb-lg-0"
+                action="#"
+                method="post"
+                role="form"
+              >
+                <h2 class="text-center mb-4">Get started here</h2>
+
+                <div class="ticket-form-body">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                      <input
+                        type="text"
+                        name="ticket-form-name"
+                        id="ticket-form-name"
+                        class="form-control"
+                        placeholder="Full name"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-12">
+                      <input
+                        type="email"
+                        name="ticket-form-email"
+                        id="ticket-form-email"
+                        pattern="[^ @]*@[^ @]*"
+                        class="form-control"
+                        placeholder="Email address"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <input
+                    type="tel"
+                    class="form-control"
+                    name="ticket-form-phone"
+                    placeholder="Ph 085-456-7890"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    required=""
+                  />
+
+                  <h6>Select Event type</h6>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                      <div class="form-check form-control">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="TicketForm"
+                          id="flexRadioDefault1"
+                        />
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Normal Event
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-12">
+                      <div class="form-check form-check-radio form-control">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="TicketForm"
+                          id="flexRadioDefault2"
+                        />
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Virtual Event
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h6>Event is scheduled on?</h6>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                      <input
+                        type="date"
+                        name="ticket-form-name"
+                        id="ticket-date"
+                        class="form-control"
+                        placeholder="Select date"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-12">
+                      <input
+                        type="time"
+                        name="ticket-form-number"
+                        id="ticket-date"
+                        class="form-control"
+                        placeholder="Select time"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <textarea
+                    name="ticket-form-message"
+                    rows="3"
+                    class="form-control"
+                    id="ticket-form-message"
+                    placeholder="Additional Request"
+                  ></textarea>
+
+                  <div class="col-lg-4 col-md-10 col-8 mx-auto">
+                    <button type="submit" class="form-control">
+                      Submit Now
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-top mb-4 bg-grey">
+        <div class="container">
+          <div class="badgeContainer">
+            <div id="badgesRow">
+              <img class="footer-logo" src="images/footer-logo.svg" />
+            </div>
+            <div id="badgesRow">
+              <img class="footer-logo" src="images/badge1.svg" />
+            </div>
+            <div id="badgesRow">
+              <img class="footer-logo" src="images/badge2.svg" />
+            </div>
+            <div id="badgesRow">
+              <img class="footer-logo" src="images/badge3.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+            <h5 class="site-footer-title mb-3">Social Links</h5>
+            <ul class="site-footer-links">
+              <li class="site-footer-link-item">
+                <a href="facebook.com" class="site-footer-link"
+                  ><i class="fa-brands fa-facebook"></i> Facebook</a
+                >
+              </li>
+
+              <li class="site-footer-link-item">
+                <a href="instagram.com" class="site-footer-link"
+                  ><i class="fa-brands fa-instagram"></i> Instagram</a
+                >
+              </li>
+
+              <li class="site-footer-link-item">
+                <a href="#" class="site-footer-link"
+                  ><i class="fa-brands fa-linkedin"></i> Linkedin</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+            <h5 class="site-footer-title mb-3">Have a question?</h5>
+            <!-- <p class="text-white d-flex mb-1">
+              <a href="tel: 04-080-0760" class="site-footer-link">
+                04-080-0760
+              </a>
+            </p> -->
+            <p class="text-white d-flex">
+              <a href="mailto:hello@krew4.com" class="site-footer-link">
+                hello@krew4.com
+              </a>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+            <h5 class="site-footer-title mb-3">Location</h5>
+            <p class="text-white d-flex mb-1">
+              <a href="" class="site-footer-link">
+                106, Coastal Oasis Building, Dubai, U.A.E.
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-12 mt-5">
+              <p class="copyright-text">Copyright © 2023 Krew4 Events</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
