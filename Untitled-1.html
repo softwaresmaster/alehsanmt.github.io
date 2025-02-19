@@ -54,7 +54,8 @@
         color: #333; /* Text color */
       }
       .text-gradient-gold {
-        background: linear-gradient(to right, #d4af37 10%, #ffd558 80%);
+        /* background: linear-gradient(to right, #d4af37 10%, #ffd558 80%); */
+        background: #000;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font: {
@@ -63,8 +64,9 @@
         }
       }
       .hero {
-        background: linear-gradient(to right, #d4af37 10%, #ffd558 80%);
-        color: white;
+        /* background: linear-gradient(to right, #d4af37 10%, #ffd558 80%); */
+        background: white !important;
+        color: rgb(0, 0, 0);
         padding: 5rem 2rem;
         text-align: center;
       }
@@ -81,6 +83,8 @@
         padding: 0.75rem 1.5rem;
         font-size: 1rem;
         border-radius: 25px;
+        background: #333 !important;
+        color: white !important;
       }
       .features {
         padding: 4rem 2rem;
@@ -113,9 +117,15 @@
         text-decoration: none;
       }
       .footer a:hover {
-        color: white;
+        color: rgb(218, 218, 218);
       }
-
+      .navbar a:hover {
+        color: rgb(0, 0, 0);
+      }
+      .btn:hover {
+        color: #e1e1e1 !important;
+        background: #000 !important;
+      }
       .services {
         padding: 3rem 1rem;
       }
@@ -129,11 +139,12 @@
         opacity: 0.9;
       }
       .card-gold {
-        background: linear-gradient(135deg, #d4af37, #f2c94c);
+        background: linear-gradient(135deg, #595959, #3a3a3a);
         color: white;
+        border: 1px solid #ddd;
       }
       .card-white {
-        background: #fff;
+        background: linear-gradient(135deg, #ffffff, #cfcfcf);
         color: #333;
         border: 1px solid #ddd;
       }
@@ -163,6 +174,72 @@
       }
       .btn-rounded {
         border-radius: 25px;
+      }
+
+      .portfolio-container {
+        max-width: 1000px;
+        margin: 50px auto;
+      }
+      .large-display {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: opacity 0.3s ease-in-out;
+      }
+      .thumbnail-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .thumbnail {
+        width: 120px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s, opacity 0.3s;
+      }
+      .thumbnail:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+
+      .video-list {
+        max-width: 400px;
+        margin: 20px auto;
+      }
+      .video-item {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .video-item:hover {
+        background: rgba(0, 0, 0, 0.05);
+      }
+      .video-thumbnail {
+        width: 120px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      .video-info h5 {
+        margin: 0;
+        font-size: 0.95rem;
+        font-weight: bold;
+      }
+      .video-info p {
+        margin: 0;
+        font-size: 0.8rem;
+        color: #555;
+      }
+      .video-info .views {
+        font-size: 0.75rem;
+        color: #777;
       }
 
       .masonry-gallery-section {
@@ -257,10 +334,8 @@
     <nav class="navbar navbar-expand-lg sticky-top">
       <div class="container">
         <div class="navbar-logo d-flex align-items-center gap-2">
-          <img src="images/brand.png" alt="Al Ehsan" class="" />
-          <span class="font-dotted text-gradient-gold brand-text"
-            >Al Ehsan Media & Tech</span
-          >
+          <!-- <img src="images/logo-dark.png" alt="Archers" class="" /> -->
+          <span class="font-dotted text-gradient-gold brand-text">ARCHERS</span>
         </div>
         <button
           class="navbar-toggler"
@@ -308,31 +383,7 @@
             <a href="#services" class="btn btn-light text-black">Learn More</a>
           </div>
 
-          <!-- Right Column (Masonry Gallery) -->
           <div class="col-lg-6">
-            <!-- <div class="masonry-gallery">
-              <div class="masonry-item">
-                <img src="https://via.placeholder.com/150" alt="Gallery 1" />
-              </div>
-              <div class="masonry-item">
-                <img
-                  src="https://via.placeholder.com/100x150"
-                  alt="Gallery 2" />
-              </div>
-              <div class="masonry-item">
-                <img
-                  src="https://via.placeholder.com/150x100"
-                  alt="Gallery 3" />
-              </div>
-              <div class="masonry-item">
-                <img src="https://via.placeholder.com/120" alt="Gallery 4" />
-              </div>
-              <div class="masonry-item">
-                <img
-                  src="https://via.placeholder.com/180x120"
-                  alt="Gallery 5" />
-              </div>
-            </div> -->
             <section class="masonry-gallery-section container">
               <div class="masonry-gallery">
                 <!-- Gallery Items -->
@@ -437,7 +488,7 @@
                 <li>Business Tours</li>
               </ul>
               <button
-                class="btn btn-primary btn-rounded"
+                class="btn btn-dark btn-rounded"
                 data-bs-toggle="modal"
                 data-bs-target="#bookNowModal">
                 Place an order
@@ -457,9 +508,9 @@
             <div class="service-content">
               <p>Key Points:</p>
               <ul>
-                <li>Logo and Branding</li>
-                <li>Social Media Graphics</li>
-                <li>Creative Designs</li>
+                <li>UX &amp; Navigation</li>
+                <li>Visual Hierarchy</li>
+                <li>SEO Optimization</li>
               </ul>
               <button
                 class="btn btn-light btn-rounded"
@@ -476,18 +527,18 @@
           <div class="service-card card-white">
             <div
               class="service-image"
-              style="background-image: url('images/iwa.jpg')">
-              <div class="service-title">Wall Arts</div>
+              style="background-image: url('images/GoogleAds.jpg')">
+              <div class="service-title">Google & Meta Ads</div>
             </div>
             <div class="service-content">
               <p>Key Points:</p>
               <ul>
-                <li>360 Photos</li>
-                <li>Map Integration</li>
-                <li>Business Tours</li>
+                <li>Targeting Audience</li>
+                <li>Compelling Ad</li>
+                <li>Performance Tracking</li>
               </ul>
               <button
-                class="btn btn-primary btn-rounded"
+                class="btn btn-dark btn-rounded"
                 data-bs-toggle="modal"
                 data-bs-target="#bookNowModal">
                 Place an order
@@ -548,12 +599,112 @@
     </div>
 
     <!-- Call to Action Section -->
-    <section class="cta">
-      <div class="container">
-        <h2>Ready to Get Started?</h2>
-        <p>Sign up now and transform the way you work.</p>
-        <a href="#signup" class="btn btn-primary">Sign Up</a>
+    <section id="pricing" class="cta">
+      <div class="container portfolio-container">
+        <div class="row">
+          <!-- Large Display (Left Column) -->
+          <div class="col-lg-8">
+            <div id="displayContainer">
+              <img
+                id="largeDisplay"
+                src="https://via.placeholder.com/900x400"
+                alt="Portfolio Display"
+                class="large-display" />
+            </div>
+          </div>
+
+          <!-- Small Thumbnails + Titles & Descriptions (Right Column) -->
+          <div class="col-lg-4 d-flex flex-column justify-content-center">
+            <div class="thumbnail-container">
+              <div
+                class="thumbnail-wrapper video-item"
+                onmouseover="changeMedia('image', 'https://via.placeholder.com/900x400', 'Graphic Design', 'Creative visuals and branding solutions.')">
+                <img
+                  src="https://via.placeholder.com/100x80"
+                  class="thumbnail" />
+                <div class="thumbnail-info video-info">
+                  <h5>Graphic Design</h5>
+                  <p>Creative visuals and branding solutions.</p>
+                </div>
+              </div>
+
+              <div
+                class="thumbnail-wrapper video-item"
+                onmouseover="changeMedia('image', 'https://via.placeholder.com/900x400/ff0000', 'Google Street View', '360-degree photography for businesses.')">
+                <img
+                  src="https://via.placeholder.com/100x80/ff0000"
+                  class="thumbnail" />
+                <div class="thumbnail-info video-info">
+                  <h5>Google Street View</h5>
+                  <p>360-degree photography for businesses.</p>
+                </div>
+              </div>
+
+              <div
+                class="thumbnail-wrapper video-item"
+                onmouseover="changeMedia('video', 'https://www.w3schools.com/html/mov_bbb.mp4', 'Website Development', 'Professional web solutions for all industries.')">
+                <video class="thumbnail">
+                  <source
+                    src="https://www.w3schools.com/html/mov_bbb.mp4"
+                    type="video/mp4" />
+                </video>
+                <div class="thumbnail-info video-info">
+                  <h5>Website Development</h5>
+                  <p>Professional web solutions for all industries.</p>
+                </div>
+              </div>
+
+              <div
+                class="thumbnail-wrapper video-item"
+                onmouseover="changeMedia('image', 'https://via.placeholder.com/900x400/00ff00', 'Digital Marketing', 'Boost your online presence with expert marketing.')">
+                <img
+                  src="https://via.placeholder.com/100x80/00ff00"
+                  class="thumbnail" />
+                <div class="thumbnail-info video-info">
+                  <h5>Digital Marketing</h5>
+                  <p>Boost your online presence with expert marketing.</p>
+                </div>
+              </div>
+
+              <div
+                class="thumbnail-wrapper video-item"
+                onmouseover="changeMedia('video', 'https://www.w3schools.com/html/movie.mp4', 'Videography', 'High-quality promotional and event videos.')">
+                <video class="thumbnail">
+                  <source
+                    src="https://www.w3schools.com/html/movie.mp4"
+                    type="video/mp4" />
+                </video>
+                <div class="thumbnail-info video-info">
+                  <h5>Videography</h5>
+                  <p>High-quality promotional and event videos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <script>
+        function changeMedia(type, src, title, description) {
+          let displayContainer = document.getElementById("displayContainer");
+          displayContainer.innerHTML = ""; // Clear previous media
+
+          if (type === "image") {
+            let img = document.createElement("img");
+            img.src = src;
+            img.className = "large-display";
+            displayContainer.appendChild(img);
+          } else if (type === "video") {
+            let video = document.createElement("video");
+            video.src = src;
+            video.className = "large-display";
+            video.controls = true;
+            video.autoplay = true;
+            video.loop = true;
+            displayContainer.appendChild(video);
+          }
+        }
+      </script>
     </section>
 
     <!-- Footer -->
