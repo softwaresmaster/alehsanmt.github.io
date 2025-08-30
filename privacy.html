@@ -5,182 +5,222 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Privacy Policy - Al-Ehsan Media & Tech" />
     <title>Privacy Policy | Al-Ehsan Media & Tech</title>
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet" />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+
     <style>
+      :root {
+        --primary-bg: #121212;
+        --secondary-bg: #1e1e1e;
+        --accent-gold: #d4af37;
+        --accent-gold-light: #e8c874;
+        --text-primary: #e0e0e0;
+        --text-secondary: #b0b0b0;
+      }
+
       body {
         font-family: "Poppins", sans-serif;
-      }
-      .navbar {
-        backdrop-filter: blur(5px);
-        background-color: rgba(255, 255, 255, 0.6);
-        border-radius: 12px;
-        height: 84px;
-        margin: 1rem;
-        margin-top: 10px;
-        padding: 0.5rem 1rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-      /* Custom class for the navbar logo */
-      .navbar-logo {
-        height: 50px; /* Adjust height as needed */
-        width: auto; /* Maintain aspect ratio */
-        display: flex;
-        align-items: center; /* Center logo vertically */
+        background-color: var(--primary-bg);
+        color: var(--text-primary);
       }
 
-      .navbar-logo img {
-        max-height: 100%; /* Ensure the image fits within the container */
-        width: auto; /* Maintain aspect ratio */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
       }
 
-      .brand-text {
-        font-size: 1.5rem; /* Adjust font size */
-        font-weight: bold; /* Make text bold */
-        color: #333; /* Text color */
-      }
       .text-gradient-gold {
-        background: linear-gradient(to right, #c39a13 10%, #ece224 80%);
+        background: linear-gradient(90deg, #d4af37, #f9e076);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
-        font: {
-          size: 18vw;
-          family: $font;
-        }
-      }
-      .hero {
-        background: linear-gradient(to right, #c0bd05, #ffee00);
-        color: white;
-        padding: 5rem 2rem;
-        text-align: center;
-      }
-      .hero h1 {
-        font-size: 3rem;
-        font-weight: 700;
-      }
-      .hero p {
-        font-size: 1.2rem;
-        margin-top: 1rem;
-      }
-      .hero .btn {
-        margin-top: 1.5rem;
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-        border-radius: 25px;
-      }
-      .features {
-        padding: 4rem 2rem;
-        text-align: center;
-      }
-      .features .feature-item {
-        margin: 2rem 0;
-      }
-      .features .icon {
-        font-size: 3rem;
-        color: #000000;
-        margin-bottom: 1rem;
-      }
-      .cta {
-        background-color: #f8f9fa;
-        padding: 3rem 2rem;
-        text-align: center;
-      }
-      .cta h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-      .footer {
-        background-color: #212529;
-        color: white;
-        padding: 2rem 2rem;
-      }
-      .footer a {
-        color: #6c757d;
-        text-decoration: none;
-      }
-      .footer a:hover {
-        color: white;
-      }
-
-      .masonry-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: flex-end; /* Aligns the gallery to the right */
-      }
-
-      .masonry-item {
-        width: calc(33.33% - 10px); /* Adjusts the width for three columns */
-        flex-grow: 1;
-      }
-
-      .masonry-item img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .masonry-item img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-      }
-      .typewriter-text {
-        font-weight: 700;
         display: inline-block;
-        white-space: nowrap; /* Prevents wrapping */
-        overflow: hidden; /* Ensures text overflow is hidden */
-        border-right: 2px solid white; /* Cursor effect */
       }
 
-      /* Blinking Cursor */
+      .bg-dark-custom {
+        background-color: var(--secondary-bg);
+      }
+
+      .btn-gold {
+        background-color: var(--accent-gold);
+        color: #000;
+        border: none;
+        transition: all 0.3s ease;
+      }
+
+      .btn-gold:hover {
+        background-color: var(--accent-gold-light);
+        color: #000;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
+      }
+
+      .section-title {
+        position: relative;
+        margin-bottom: 2rem;
+      }
+
+      .section-title:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 50px;
+        height: 3px;
+        background: var(--accent-gold);
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: rgba(30, 30, 30, 0.9) !important;
+        backdrop-filter: blur(5px);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+      }
+
+      .navbar-brand img {
+        height: 40px;
+      }
+
+      .nav-link {
+        color: var(--text-primary) !important;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: var(--accent-gold) !important;
+      }
+
+      /* Hero Section */
+      .privacy-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("images/privacy-bg.jpg") no-repeat center center;
+        background-size: cover;
+        padding: 8rem 0;
+        text-align: center;
+      }
+
+      .privacy-hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Content Section */
+      .content-section {
+        padding: 5rem 0;
+      }
+
+      .content-section h2 {
+        color: var(--accent-gold);
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .content-section ul {
+        padding-left: 1.5rem;
+      }
+
+      .content-section li {
+        margin-bottom: 0.5rem;
+        position: relative;
+      }
+
+      .content-section li:before {
+        content: "";
+        position: absolute;
+        left: -1.5rem;
+        top: 0.7rem;
+        width: 8px;
+        height: 8px;
+        background-color: var(--accent-gold);
+        border-radius: 50%;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: var(--secondary-bg);
+        padding: 3rem 0;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+      }
+
+      .footer a {
+        color: var(--accent-gold);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: var(--accent-gold-light);
+        text-decoration: underline;
+      }
+
+      /* Typewriter Effect */
+      .typewriter-text {
+        font-weight: 500;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid var(--accent-gold);
+        animation: blink 0.7s step-end infinite;
+      }
+
       @keyframes blink {
-        from {
-          border-color: white;
-        }
+        from,
         to {
           border-color: transparent;
         }
+        50% {
+          border-color: var(--accent-gold);
+        }
       }
 
-      .typewriter-text {
-        animation: blink 0.5s step-end infinite alternate; /* Blinking cursor effect */
-      }
-      @font-face {
-        font-family: font-dotted;
-        src: url(../fonts/yep.woff2) format("woff2"),
-          url(../fonts/yep.woff) format("woff"),
-          url(../fonts/yep.ttf) format("truetype"),
-          url(../fonts/yep.svg#font-dotted) format("svg");
-      }
-      .font-dotted {
-        font-family: font-dotted;
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .privacy-hero {
+          padding: 5rem 0;
+        }
+
+        .privacy-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .section-title:after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <div class="d-flex align-items-center gap-2">
-          <img src="images/brand.png" alt="Al Ehsan" class="navbar-logo" />
-          <span class="font-dotted text-gradient-gold brand-text"
-            >Al Ehsan Media & Tech</span
-          >
-        </div>
+        <a class="navbar-brand" href="index.html">
+          <img src="images/brand.png" alt="Al-Ehsan Media & Tech" />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
+          data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -206,104 +246,171 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="privacy-hero">
       <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="typewriter-text"></p>
+        <h1 class="text-gradient-gold">Privacy Policy</h1>
+        <br />
+        <p class="lead typewriter-text">
+          Your privacy is our priority at Al-Ehsan Media & Tech.
+        </p>
       </div>
     </section>
 
     <!-- Content Section -->
     <section class="content-section">
       <div class="container">
-        <h2 class="mt-5">Information We Collect</h2>
+        <h2 class="section-title">Information We Collect</h2>
         <p>
           At Al-Ehsan Media & Tech, we collect only the necessary information to
           provide our services effectively. This includes:
         </p>
         <ul>
           <li>Name</li>
-          <li>Email</li>
+          <li>Email address</li>
           <li>Phone number</li>
+          <li>Business information</li>
           <li>Other details you submit through our website</li>
         </ul>
 
-        <h2>Data Usage</h2>
-        <p>We use your data for:</p>
+        <h2 class="section-title">How We Use Your Data</h2>
+        <p>We use your data exclusively for:</p>
         <ul>
-          <li>Service delivery</li>
-          <li>Communication</li>
-          <li>Improving our services</li>
+          <li>Service delivery and fulfillment</li>
+          <li>Communication regarding your projects</li>
+          <li>Improving our services and customer experience</li>
+          <li>Legal compliance and record keeping</li>
         </ul>
 
-        <h2>Data Security</h2>
+        <h2 class="section-title">Data Security</h2>
         <p>
-          We take reasonable measures to protect your personal information from
-          unauthorized access.
+          We implement industry-standard security measures to protect your
+          personal information:
+        </p>
+        <ul>
+          <li>Secure servers with encryption</li>
+          <li>Limited access to personal data</li>
+          <li>Regular security audits</li>
+          <li>Employee confidentiality agreements</li>
+        </ul>
+
+        <h2 class="section-title">Third-Party Sharing</h2>
+        <p>We maintain strict policies regarding third-party data sharing:</p>
+        <ul>
+          <li>We do not sell your personal information</li>
+          <li>
+            We don't have any third party partnerships or vendors that require
+            sharing your data
+          </li>
+        </ul>
+
+        <h2 class="section-title">Cookies & Tracking</h2>
+        <p>Our website uses:</p>
+        <ul>
+          <li>Essential cookies for website functionality</li>
+          <li>Analytics cookies to improve user experience</li>
+          <li>Optional marketing cookies (with your consent)</li>
+        </ul>
+        <p>You can manage cookie preferences through your browser settings.</p>
+
+        <h2 class="section-title">Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Access your personal data</li>
+          <li>Request correction of inaccurate information</li>
+          <li>Request deletion of your data (where applicable)</li>
+          <li>Object to certain processing activities</li>
+          <li>Lodge complaints with regulatory authorities</li>
+        </ul>
+
+        <h2 class="section-title">Policy Updates</h2>
+        <p>
+          We may update this policy periodically. The current version is always
+          available on our website with the last revision date.
         </p>
 
-        <h2>Third-Party Sharing</h2>
+        <h2 class="section-title">Contact Us</h2>
         <p>
-          We do not sell or share your data with third parties, except as
-          required to provide our services (e.g., hosting through
-          Hostinger/GoDaddy).
+          For any privacy concerns or requests, please contact our Data
+          Protection Officer:
+          <br /><br />
+          <a href="mailto:privacy@alehsanmt.com" class="text-gradient-gold"
+            >privacy@alehsanmt.com</a
+          >
+          <br />
+          +91 81258 23926
         </p>
-
-        <h2>Cookies</h2>
-        <p>We may use cookies for website functionality and analytics.</p>
-
-        <h2>Contact Us</h2>
-        <p>
-          For any privacy concerns, email us at:
-          <a href="mailto:contact@alehsanmt.com">contact@alehsanmt.com</a>.
-        </p>
+        <p class="mt-4">Last updated: <strong>June 2023</strong></p>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p>&copy; 2025 Your Company. All rights reserved.</p>
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="mb-0">
+              &copy; 2018 Al-Ehsan Media & Tech. All rights reserved.
+            </p>
           </div>
-          <div class="col-md-6 text-end">
+          <div class="col-md-6 text-center text-md-end">
             <a href="privacy.html">Privacy Policy</a> |
-            <a href="tc.html">Terms of Service</a>
+            <a href="tc.html">Terms of Service</a> |
+            <a href="rp.html">Refund Policy</a>
           </div>
         </div>
       </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Typewriter Effect -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const typewriterText = document.querySelector(".typewriter-text");
         const words = [
           "Your privacy is our priority at Al-Ehsan Media & Tech.",
+          "We protect your data with industry-standard security.",
+          "Transparent about how we use your information.",
         ];
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
+        let isEnd = false;
 
         const type = () => {
           const currentWord = words[wordIndex];
+
+          // Determine which portion of the word to display
           typewriterText.textContent = isDeleting
-            ? currentWord.substring(0, charIndex--)
-            : currentWord.substring(0, charIndex++);
+            ? currentWord.substring(0, charIndex - 1)
+            : currentWord.substring(0, charIndex + 1);
+
+          // Update character index
+          charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
 
           if (!isDeleting && charIndex === currentWord.length) {
-            setTimeout(() => (isDeleting = true), 1000);
+            // Pause at end of word
+            isEnd = true;
+            setTimeout(() => {
+              isDeleting = true;
+              isEnd = false;
+              type();
+            }, 2000);
+            return;
           } else if (isDeleting && charIndex === 0) {
+            // Move to next word when deletion complete
             isDeleting = false;
             wordIndex = (wordIndex + 1) % words.length;
           }
 
-          const typingSpeed = isDeleting ? 100 : 150;
+          // Set typing speed (faster when deleting)
+          const typingSpeed = isDeleting ? 50 : isEnd ? 1000 : 100;
           setTimeout(type, typingSpeed);
         };
 
-        type();
+        // Start typing after a brief delay
+        setTimeout(type, 500);
       });
     </script>
   </body>

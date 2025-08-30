@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Keep all your existing head content -->
+    <title>ARCHERS Dashboard</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" href="images/archer-logo.png" type="image/x-icon" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+    <!-- animation libraries start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- animation libraries end -->
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Modified Navbar for Dashboard -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-logo">
+          <img
+            class="navbar-logo"
+            src="images/archer-logo.png"
+            alt="Logo"
+            class="logo" />
+          <span class="brand-text m-1">RCHERS</span>
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="dropdown">
+            <button
+              class="btn btn-dark dropdown-toggle"
+              type="button"
+              id="userDropdown"
+              data-bs-toggle="dropdown">
+              <i class="fas fa-user-circle me-1"></i> User-100-786-1123
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fas fa-user me-2"></i> Profile</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fas fa-cog me-2"></i> Settings</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fas fa-sign-out-alt me-2"></i> Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <ul class="nav nav-pills flex-column p-3">
+          <li class="nav-item">
+            <a
+              class="nav-link active text-active"
+              href="#dashboard"
+              data-bs-toggle="tab">
+              <i class="fas fa-tachometer-alt me-2"></i> Dashboard
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link text-inactive"
+              href="#wallet"
+              data-bs-toggle="tab">
+              <i class="fas fa-wallet me-2"></i> Wallet
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-inactive"
+              href="#transactions"
+              data-bs-toggle="tab">
+              <i class="fas fa-exchange-alt me-2"></i> Transactions
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-inactive"
+              href="#support"
+              data-bs-toggle="tab">
+              <i class="fas fa-headset me-2"></i> Support
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="tab-content">
+          <!-- Dashboard Tab -->
+          <div class="tab-pane fade show active" id="dashboard">
+            <h2 class="text-white mb-4">Dashboard Overview</h2>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="stats-card" style="border-left-color: #fbbc05">
+                  <h5 class="text-white-50">Available Balance</h5>
+                  <div class="wallet-balance">₹1,250</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="stats-card" style="border-left-color: #e1306c">
+                  <h5 class="text-white-50">Tasks Completed</h5>
+                  <h3 class="text-white">87</h3>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="stats-card" style="border-left-color: #1877f2">
+                  <h5 class="text-white-50">Orders Placed</h5>
+                  <h3 class="text-white">12</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <div class="card bg-dark text-white mb-4">
+                  <div class="card-header">
+                    <h5>Recent Tasks</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="task-card">
+                      <div class="d-flex justify-content-between">
+                        <h6>YouTube Like</h6>
+                        <span class="badge bg-success">+₹8</span>
+                      </div>
+                      <small class="text-white-50">Completed 2 hours ago</small>
+                    </div>
+                    <div class="task-card">
+                      <div class="d-flex justify-content-between">
+                        <h6>Google Review</h6>
+                        <span class="badge bg-success">+₹10</span>
+                      </div>
+                      <small class="text-white-50">Completed 5 hours ago</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card bg-dark text-white">
+                  <div class="card-header">
+                    <h5>Recent Orders</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="task-card">
+                      <div class="d-flex justify-content-between">
+                        <h6>100 Instagram Followers</h6>
+                        <span class="badge bg-danger">-₹100</span>
+                      </div>
+                      <small class="text-white-50">Processing</small>
+                    </div>
+                    <div class="task-card">
+                      <div class="d-flex justify-content-between">
+                        <h6>50 Google Reviews</h6>
+                        <span class="badge bg-danger">-₹50</span>
+                      </div>
+                      <small class="text-white-50">Completed</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Client Panel Tab -->
+          <div class="tab-pane fade" id="client">
+            <h2 class="text-white mb-4">Client Panel</h2>
+            <div class="card bg-dark text-white mb-4">
+              <div class="card-header">
+                <h5>Buy Engagement Services</h5>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <!-- Google Reviews Package -->
+                  <div class="col-md-3 mb-4">
+                    <div
+                      class="package-card text-center p-3 rounded-3"
+                      style="background-color: #1e1e1e">
+                      <div class="icon-circle g-icon mb-3">
+                        <i class="fa-brands fa-google fa-2x"></i>
+                      </div>
+                      <h5 class="text-white">Google Reviews</h5>
+                      <div class="pricing-tier my-3">
+                        <h4 class="text-primary">
+                          ₹10 <small class="text-white-50">per review</small>
+                        </h4>
+                      </div>
+                      <ul class="list-unstyled text-white-50 small mb-3">
+                        <li class="mb-2">✓ High-quality reviews</li>
+                        <li class="mb-2">✓ Gradual delivery</li>
+                        <li class="mb-2">✓ 30-day retention</li>
+                      </ul>
+                      <button
+                        class="btn btn-primary btn-sm w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#orderModal"
+                        data-service="Google Reviews"
+                        data-price="10">
+                        Order Now
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Instagram Followers Package -->
+                  <div class="col-md-3 mb-4">
+                    <div
+                      class="package-card text-center p-3 rounded-3"
+                      style="background-color: #1e1e1e">
+                      <div class="icon-circle ig-icon mb-3">
+                        <i class="fa-brands fa-instagram fa-2x"></i>
+                      </div>
+                      <h5 class="text-white">Instagram Followers</h5>
+                      <div class="pricing-tier my-3">
+                        <h4 class="text-primary">
+                          ₹12 <small class="text-white-50">per follower</small>
+                        </h4>
+                      </div>
+                      <ul class="list-unstyled text-white-50 small mb-3">
+                        <li class="mb-2">✓ Real-looking accounts</li>
+                        <li class="mb-2">✓ Gradual delivery</li>
+                        <li class="mb-2">✓ 30-day retention</li>
+                      </ul>
+                      <button
+                        class="btn btn-primary btn-sm w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#orderModal"
+                        data-service="Instagram Followers"
+                        data-price="12">
+                        Order Now
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Add more service packages as needed -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Order History -->
+            <div class="card bg-dark text-white">
+              <div class="card-header">
+                <h5>Your Orders</h5>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-dark table-hover">
+                    <thead>
+                      <tr>
+                        <th>Order ID</th>
+                        <th>Service</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#ORD-78945</td>
+                        <td>Google Reviews</td>
+                        <td>50</td>
+                        <td>₹500</td>
+                        <td><span class="badge bg-success">Completed</span></td>
+                        <td>15 Jun 2023</td>
+                      </tr>
+                      <tr>
+                        <td>#ORD-78944</td>
+                        <td>Instagram Followers</td>
+                        <td>100</td>
+                        <td>₹1,200</td>
+                        <td>
+                          <span class="badge bg-warning">Processing</span>
+                        </td>
+                        <td>14 Jun 2023</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tasker Panel Tab -->
+          <div class="tab-pane fade" id="tasker">
+            <h2 class="text-white mb-4">Tasker Panel</h2>
+            <div class="card bg-dark text-white mb-4">
+              <div class="card-header">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="mb-0">Available Tasks</h5>
+                  <div class="form-check form-switch">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="autoAssignToggle"
+                      checked />
+                    <label class="form-check-label" for="autoAssignToggle"
+                      >Auto Assign Tasks</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="task-card">
+                  <div
+                    class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <h6 class="mb-1">Like YouTube Video</h6>
+                      <small class="text-white-50"
+                        >Video URL: youtube.com/watch?v=abc123</small
+                      >
+                    </div>
+                    <div class="text-end">
+                      <span class="badge bg-success mb-2">+₹8</span>
+                      <button class="btn btn-sm btn-primary">
+                        Accept Task
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="task-card">
+                  <div
+                    class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <h6 class="mb-1">Write Google Review</h6>
+                      <small class="text-white-50"
+                        >Business: Yum Yum Tree Restaurant</small
+                      >
+                    </div>
+                    <div class="text-end">
+                      <span class="badge bg-success mb-2">+₹10</span>
+                      <button class="btn btn-sm btn-primary">
+                        Accept Task
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Task History -->
+            <div class="card bg-dark text-white">
+              <div class="card-header">
+                <h5>Your Task History</h5>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-dark table-hover">
+                    <thead>
+                      <tr>
+                        <th>Task ID</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th>Earnings</th>
+                        <th>Completed On</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#TASK-45879</td>
+                        <td>YouTube Like</td>
+                        <td><span class="badge bg-success">Approved</span></td>
+                        <td>+₹8</td>
+                        <td>15 Jun 2023, 14:30</td>
+                      </tr>
+                      <tr>
+                        <td>#TASK-45878</td>
+                        <td>Google Review</td>
+                        <td>
+                          <span class="badge bg-warning">Pending Review</span>
+                        </td>
+                        <td>+₹10</td>
+                        <td>15 Jun 2023, 11:15</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wallet Tab -->
+          <div class="tab-pane fade" id="wallet">
+            <h2 class="text-white mb-4">Wallet</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card bg-dark text-white mb-4">
+                  <div class="card-header">
+                    <h5>Balance Summary</h5>
+                  </div>
+                  <div class="card-body text-center">
+                    <div class="wallet-balance mb-3">₹1,250</div>
+                    <p class="text-white-50">Available for withdrawal</p>
+                    <button
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#withdrawModal">
+                      Withdraw Funds
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card bg-dark text-white">
+                  <div class="card-header">
+                    <h5>Withdrawal Information</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="mb-3">
+                      <h6 class="text-white-50">Minimum Withdrawal:</h6>
+                      <p class="text-white">₹200</p>
+                    </div>
+                    <div class="mb-3">
+                      <h6 class="text-white-50">Payment Method:</h6>
+                      <p class="text-white">Bank Transfer (KYC Required)</p>
+                    </div>
+                    <div class="mb-3">
+                      <h6 class="text-white-50">Processing Time:</h6>
+                      <p class="text-white">3-5 Business Days</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header">
+            <h5 class="modal-title">Place New Order</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="orderForm">
+              <div class="mb-3">
+                <label class="form-label">Service</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="orderService"
+                  readonly />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Price Per Unit</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="orderPrice"
+                  readonly />
+              </div>
+              <div class="mb-3">
+                <label for="orderQuantity" class="form-label">Quantity</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="orderQuantity"
+                  min="10"
+                  value="10" />
+              </div>
+              <div class="mb-3">
+                <label for="orderLink" class="form-label">Link/URL</label>
+                <input
+                  type="url"
+                  class="form-control"
+                  id="orderLink"
+                  required
+                  placeholder="https://" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Total Amount</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="orderTotal"
+                  readonly />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal">
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary" id="confirmOrder">
+              Confirm Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Withdraw Modal -->
+    <div class="modal fade" id="withdrawModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header">
+            <h5 class="modal-title">Withdraw Funds</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="withdrawForm">
+              <div class="mb-3">
+                <label class="form-label">Available Balance</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  value="₹1,250"
+                  readonly />
+              </div>
+              <div class="mb-3">
+                <label for="withdrawAmount" class="form-label"
+                  >Amount to Withdraw (Min ₹200)</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="withdrawAmount"
+                  min="200"
+                  max="1250"
+                  value="200" />
+              </div>
+              <div class="mb-3">
+                <label for="bankAccount" class="form-label">Bank Account</label>
+                <select class="form-select" id="bankAccount" required>
+                  <option value="">Select Bank Account</option>
+                  <option value="1">HDFC Bank - XXXX7890</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal">
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary" id="confirmWithdraw">
+              Request Withdrawal
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task Submission Modal -->
+    <div
+      class="modal fade"
+      id="taskSubmitModal"
+      tabindex="-1"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header">
+            <h5 class="modal-title">Submit Task Proof</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="taskSubmitForm">
+              <div class="mb-3">
+                <label class="form-label">Task</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  value="Google Review for Yum Yum Tree"
+                  readonly />
+              </div>
+              <div class="mb-3">
+                <label for="screenshot" class="form-label"
+                  >Upload Screenshot</label
+                >
+                <input
+                  type="file"
+                  class="form-control"
+                  id="screenshot"
+                  accept="image/*"
+                  required />
+              </div>
+              <div class="mb-3">
+                <label for="taskNotes" class="form-label"
+                  >Notes (Optional)</label
+                >
+                <textarea
+                  class="form-control"
+                  id="taskNotes"
+                  rows="3"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal">
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary" id="submitTask">
+              Submit Task
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript for Dashboard Functionality -->
+    <script>
+      // Order Modal Logic
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set up order modal
+        const orderModal = document.getElementById("orderModal");
+        orderModal.addEventListener("show.bs.modal", function (event) {
+          const button = event.relatedTarget;
+          const service = button.getAttribute("data-service");
+          const price = button.getAttribute("data-price");
+
+          document.getElementById("orderService").value = service;
+          document.getElementById("orderPrice").value = "₹" + price;
+          updateOrderTotal();
+        });
+
+        // Calculate order total when quantity changes
+        document
+          .getElementById("orderQuantity")
+          .addEventListener("input", updateOrderTotal);
+
+        function updateOrderTotal() {
+          const price = document
+            .getElementById("orderPrice")
+            .value.replace("₹", "");
+          const quantity = document.getElementById("orderQuantity").value;
+          const total = price * quantity;
+          document.getElementById("orderTotal").value = "₹" + total;
+        }
+
+        // Confirm order
+        document
+          .getElementById("confirmOrder")
+          .addEventListener("click", function () {
+            alert("Order placed successfully!");
+            const modal = bootstrap.Modal.getInstance(orderModal);
+            modal.hide();
+          });
+
+        // Withdraw modal logic
+        document
+          .getElementById("confirmWithdraw")
+          .addEventListener("click", function () {
+            const amount = document.getElementById("withdrawAmount").value;
+            if (amount < 200) {
+              alert("Minimum withdrawal amount is ₹200");
+              return;
+            }
+            alert(
+              "Withdrawal request for ₹" + amount + " submitted successfully!"
+            );
+            const modal = bootstrap.Modal.getInstance(
+              document.getElementById("withdrawModal")
+            );
+            modal.hide();
+          });
+
+        // Task submission
+        document
+          .getElementById("submitTask")
+          .addEventListener("click", function () {
+            alert(
+              "Task submitted for review! You will be credited after verification."
+            );
+            const modal = bootstrap.Modal.getInstance(
+              document.getElementById("taskSubmitModal")
+            );
+            modal.hide();
+          });
+      });
+    </script>
+  </body>
+</html>

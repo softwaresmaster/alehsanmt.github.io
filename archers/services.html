@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Start Title -->
+    <title>ARCHERS</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" href="images/archer-logo.png" type="image/x-icon" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+    <!-- animation libraries start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- animation libraries end -->
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const typewriterText = document.querySelector(".typewriter-text");
+        const words = ["Workflow", "Business"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        const type = () => {
+          const currentWord = words[wordIndex];
+          typewriterText.textContent = isDeleting
+            ? currentWord.substring(0, charIndex--)
+            : currentWord.substring(0, charIndex++);
+
+          if (!isDeleting && charIndex === currentWord.length) {
+            setTimeout(() => (isDeleting = true), 1000);
+          } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+          }
+
+          const typingSpeed = isDeleting ? 100 : 150;
+          setTimeout(type, typingSpeed);
+        };
+
+        type();
+      });
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-logo">
+          <img
+            class="navbar-logo"
+            src="images/archer-logo.png"
+            alt="Logo"
+            class="logo" /><span class="brand-text m-1">RCHERS</span>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-dark px-3 py-1 rounded-pill"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#authModal">
+                <i class="fa-solid fa-user"></i> Sign In
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-brand">
+        <span class="text-dull">ARCHERS</span>
+      </div>
+      <div class="container hero-content">
+        <div class="row align-items-center">
+          <!-- Left Column -->
+          <div class="text-center text-lg-start">
+            <h1>Revolutionize Your</h1>
+            <br />
+            <h1><span class="typewriter-text"></span></h1>
+            <p class="animated-text">
+              Experience seamless collaboration and creativity like never
+              before.
+            </p>
+            <a href="#services" class="btn btn-light text-black">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services-section container mt-5 mb-5">
+      <h1
+        class="text-center text-dull mb-4 animate__animated animate__zoomInDown">
+        Our Services
+      </h1>
+      <div class="row gy-4">
+        <!-- Service Card 1 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-right">
+          <div class="service-card card-gold">
+            <div
+              class="service-image"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1572044162444-ad60f128bdea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+              ">
+              <div class="service-title">Graphic Design</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="col-md-6 col-lg-3" data-aos="flip-up">
+          <div class="service-card card-white">
+            <div
+              class="service-image"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+              ">
+              <div class="service-title">Google Street View</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="col-md-6 col-lg-3" data-aos="flip-up">
+          <div class="service-card card-gold">
+            <div
+              class="service-image"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+              ">
+              <div class="service-title">Website Design</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-left">
+          <div class="service-card card-white">
+            <div
+              class="service-image"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+              ">
+              <div class="service-title">Google & Meta Ads</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="pricing" class="cta">
+      <div class="container portfolio-container">
+        <div class="row">
+          <!-- Large Display (Left Column) -->
+          <div class="col-lg-8">
+            <div id="displayContainer">
+              <img
+                id="largeDisplay"
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80"
+                alt="Portfolio Display"
+                class="large-display" />
+            </div>
+          </div>
+
+          <!-- Small Thumbnails + Titles & Descriptions (Right Column) -->
+          <div class="col-lg-4 d-flex flex-column justify-content-center">
+            <div class="thumbnail-container">
+              <div
+                class="thumbnail-wrapper video-item"
+                onmouseover="changeMedia('image', 'https://images.unsplash.com/photo-1572044162444-ad60f128bdea?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', 'Graphic Design', 'Creative visuals and branding solutions.')">
+                <img
+                  src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                  class="thumbnail" />
+                <div class="thumbnail-info video-info">
+                  <h5>Graphic Design</h5>
+                  <p>Creative visuals and branding solutions.</p>
+                </div>
+              </div>
+
+              <div
+                class="thumbnail-wrapper video-item"
+                onmouseover="changeMedia('image', 'https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', 'Google Street View', '360-degree photography for businesses.')">
+                <img
+                  src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                  class="thumbnail" />
+                <div class="thumbnail-info video-info">
+                  <h5>Google Street View</h5>
+                  <p>360-degree photography for businesses.</p>
+                </div>
+              </div>
+
+              <div
+                class="thumbnail-wrapper video-item"
+                onmouseover="changeMedia('video', 'https://www.w3schools.com/html/mov_bbb.mp4', 'Website Development', 'Professional web solutions for all industries.')">
+                <video class="thumbnail">
+                  <source
+                    src="https://www.w3schools.com/html/mov_bbb.mp4"
+                    type="video/mp4" />
+                </video>
+                <div class="thumbnail-info video-info">
+                  <h5>Website Development</h5>
+                  <p>Professional web solutions for all industries.</p>
+                </div>
+              </div>
+
+              <div
+                class="thumbnail-wrapper video-item"
+                onmouseover="changeMedia('image', 'https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', 'Digital Marketing', 'Boost your online presence with expert marketing.')">
+                <img
+                  src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                  class="thumbnail" />
+                <div class="thumbnail-info video-info">
+                  <h5>Digital Marketing</h5>
+                  <p>Boost your online presence with expert marketing.</p>
+                </div>
+              </div>
+
+              <div
+                class="thumbnail-wrapper video-item"
+                onmouseover="changeMedia('video', 'https://www.w3schools.com/html/movie.mp4', 'Videography', 'High-quality promotional and event videos.')">
+                <video class="thumbnail">
+                  <source
+                    src="https://www.w3schools.com/html/movie.mp4"
+                    type="video/mp4" />
+                </video>
+                <div class="thumbnail-info video-info">
+                  <h5>Videography</h5>
+                  <p>High-quality promotional and event videos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function changeMedia(type, src, title, description) {
+          let displayContainer = document.getElementById("displayContainer");
+          displayContainer.innerHTML = ""; // Clear previous media
+
+          if (type === "image") {
+            let img = document.createElement("img");
+            img.src = src;
+            img.className = "large-display";
+            displayContainer.appendChild(img);
+          } else if (type === "video") {
+            let video = document.createElement("video");
+            video.src = src;
+            video.className = "large-display";
+            video.controls = true;
+            video.autoplay = true;
+            video.loop = true;
+            displayContainer.appendChild(video);
+          }
+        }
+      </script>
+    </section>
+
+    <!-- Infinite Logo Carousel -->
+    <div
+      class="logo-carousel-container py-4"
+      style="background-color: #000; overflow: hidden; position: relative">
+      <div
+        class="logo-carousel-track"
+        style="
+          display: flex;
+          width: max-content;
+          animation: scroll 30s linear infinite;
+        ">
+        <div
+          class="logo-carousel"
+          aria-hidden="true"
+          style="display: flex; align-items: center">
+          <img
+            src="images/clients-logo/logo-1-yyt.webp"
+            alt="Yum Yum Tree Arabian Food Court"
+            style="
+              height: 60px;
+              margin: 0 40px;
+              filter: grayscale(100%) brightness(2) invert(1);
+              opacity: 0.8;
+              transition: all 0.3s ease;
+            " />
+          <img
+            src="images/clients-logo/logo-2-lucky-hotel.png"
+            alt="Lucky Restaurant"
+            style="
+              height: 60px;
+              margin: 0 40px;
+              filter: grayscale(100%) brightness(2) invert(1);
+              opacity: 0.8;
+              transition: all 0.3s ease;
+            " />
+          <img
+            src="images/clients-logo/logo-3-ksrefrigeratorsservice.png"
+            alt="Logo 3"
+            style="
+              height: 60px;
+              margin: 0 40px;
+              filter: grayscale(100%) brightness(2) invert(1);
+              opacity: 0.8;
+              transition: all 0.3s ease;
+            " />
+          <img
+            src="images/clients-logo/logo-5-times-overseas.png"
+            alt="Times Overseas"
+            style="
+              height: 60px;
+              margin: 0 40px;
+              filter: grayscale(100%) brightness(2) invert(1);
+              opacity: 0.8;
+              transition: all 0.3s ease;
+            " />
+          <img
+            src="images/clients-logo/logo-6-tgoi.png"
+            alt="Logo 6"
+            style="
+              height: 60px;
+              margin: 0 40px;
+              filter: grayscale(100%) brightness(2) invert(1);
+              opacity: 0.8;
+              transition: all 0.3s ease;
+            " />
+          <img
+            src="images/clients-logo/logo-7-for-you-cleaning.png"
+            alt="Logo 7"
+            style="
+              height: 60px;
+              margin: 0 40px;
+              filter: grayscale(100%) brightness(2) invert(1);
+              opacity: 0.8;
+              transition: all 0.3s ease;
+            " />
+        </div>
+        <div
+          class="logo-carousel"
+          aria-hidden="true"
+          style="display: flex; align-items: center">
+          <img
+            src="images/clients-logo/logo-1-yyt.webp"
+            alt="Yum Yum Tree Arabian Food Court"
+            style="
+              height: 60px;
+              margin: 0 40px;
+              filter: grayscale(100%) brightness(2) invert(1);
+              opacity: 0.8;
+              transition: all 0.3s ease;
+            " />
+          <img
+            src="images/clients-logo/logo-2-lucky-hotel.png"
+            alt="Lucky Restaurant"
+            style="
+              height: 60px;
+              margin: 0 40px;
+              filter: grayscale(100%) brightness(2) invert(1);
+              opacity: 0.8;
+              transition: all 0.3s ease;
+            " />
+          <img
+            src="images/clients-logo/logo-3-ksrefrigeratorsservice.png"
+            alt="Logo 3"
+            style="
+              height: 60px;
+              margin: 0 40px;
+              filter: grayscale(100%) brightness(2) invert(1);
+              opacity: 0.8;
+              transition: all 0.3s ease;
+            " />
+          <img
+            src="images/clients-logo/logo-5-times-overseas.png"
+            alt="Times Overseas"
+            style="
+              height: 60px;
+              margin: 0 40px;
+              filter: grayscale(100%) brightness(2) invert(1);
+              opacity: 0.8;
+              transition: all 0.3s ease;
+            " />
+          <img
+            src="images/clients-logo/logo-6-tgoi.png"
+            alt="Times Group of Institutions"
+            style="
+              height: 60px;
+              margin: 0 40px;
+              filter: grayscale(100%) brightness(2) invert(1);
+              opacity: 0.8;
+              transition: all 0.3s ease;
+            " />
+          <img
+            src="images/clients-logo/logo-7-for-you-cleaning.png"
+            alt="Logo 7"
+            style="
+              height: 60px;
+              margin: 0 40px;
+              filter: grayscale(100%) brightness(2) invert(1);
+              opacity: 0.8;
+              transition: all 0.3s ease;
+            " />
+        </div>
+      </div>
+    </div>
+
+    <style>
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .logo-carousel img:hover {
+        opacity: 1 !important;
+        filter: grayscale(0) brightness(1) invert(0) !important;
+        transform: scale(1.1);
+      }
+    </style>
+
+    <!-- Pricing Section -->
+    <!-- <section
+      id="pricing"
+      class="pricing-section py-5"
+      style="background-color: #f8f9fa">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1 class="  text-dull mb-3">Our Pricing</h1>
+          <p class="lead">
+            Simple, transparent pricing for all your digital needs
+          </p>
+        </div>
+
+        <div class="row g-4"> 
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="card pricing-card h-100 border-0 shadow-sm">
+              <div class="card-header bg-dark text-white text-center py-4">
+                <h4 class="  mb-0">Graphic Design</h4>
+              </div>
+              <div class="card-body p-4">
+                <div class="text-center mb-4">
+                  <span class="display-4 fw-bold">$299</span>
+                  <span class="text-muted">/project</span>
+                </div>
+                <ul class="list-unstyled mb-4">
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> Logo
+                    Design
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Business Cards
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> Social
+                    Media Kit
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> 3
+                    Revisions
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> Source
+                    Files
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-transparent border-0 text-center pb-4">
+                <button class="btn btn-dark btn-rounded px-4">Book Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200">
+            <div class="card pricing-card h-100 border-0 shadow-sm">
+              <div class="card-header bg-primary text-white text-center py-4">
+                <h4 class="  mb-0">Street View</h4>
+              </div>
+              <div class="card-body p-4">
+                <div class="text-center mb-4">
+                  <span class="display-4 fw-bold">$499</span>
+                  <span class="text-muted">/location</span>
+                </div>
+                <ul class="list-unstyled mb-4">
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> 360°
+                    Photography
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> Google
+                    Business Profile
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Virtual Tour
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> Up to
+                    2,000 sq ft
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> 1 Year
+                    Hosting
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-transparent border-0 text-center pb-4">
+                <button class="btn btn-primary btn-rounded px-4">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300">
+            <div class="card pricing-card h-100 border-0 shadow-sm">
+              <div class="card-header bg-warning text-dark text-center py-4">
+                <h4 class="  mb-0">Website Design</h4>
+              </div>
+              <div class="card-body p-4">
+                <div class="text-center mb-4">
+                  <span class="display-4 fw-bold">$999</span>
+                  <span class="text-muted">/site</span>
+                </div>
+                <ul class="list-unstyled mb-4">
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> 5-Page
+                    Website
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> Mobile
+                    Responsive
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> CMS
+                    Integration
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> Basic
+                    SEO Setup
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> 1 Year
+                    Hosting
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-transparent border-0 text-center pb-4">
+                <button class="btn btn-warning btn-rounded px-4">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="400">
+            <div class="card pricing-card h-100 border-0 shadow-sm">
+              <div class="card-header bg-success text-white text-center py-4">
+                <h4 class="  mb-0">Digital Ads</h4>
+              </div>
+              <div class="card-body p-4">
+                <div class="text-center mb-4">
+                  <span class="display-4 fw-bold">$1,499</span>
+                  <span class="text-muted">/month</span>
+                </div>
+                <ul class="list-unstyled mb-4">
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Campaign Setup
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> Ad
+                    Creative Design
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> Google
+                    & Meta Ads
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Monthly Reporting
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i> 2
+                    Campaign Revisions
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-transparent border-0 text-center pb-4">
+                <button class="btn btn-success btn-rounded px-4">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-5">
+                <h3 class="  mb-3">Need a Custom Solution?</h3>
+                <p class="lead mb-4">
+                  We offer tailored packages for businesses with special
+                  requirements
+                </p>
+                <button
+                  class="btn btn-dark btn-rounded px-4"
+                  data-bs-toggle="modal"
+                  data-bs-target="#contactModal">
+                  Contact Us
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1 class="text-dull mb-3">PACKAGES</h1>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Google Reviews -->
+          <div class="col-md-3">
+            <div class="package-card text-center">
+              <div class="icon-circle g-icon">
+                <i class="fa-brands fa-square-google-plus"></i>
+              </div>
+              <h5 class="mb-3 text-white">Google Reviews</h5>
+              <p class="text-white-50">Reviews: 50 / 100 / 500</p>
+              <button href="#bookNowModal" class="btn btn-custom g-btn">
+                See Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Instagram -->
+          <div class="col-md-3">
+            <div class="package-card text-center">
+              <div class="icon-circle ig-icon">
+                <i class="fa-brands fa-square-instagram"></i>
+              </div>
+              <h5 class="mb-3 text-white">Instagram</h5>
+              <p class="text-white-50">
+                Followers: 100 / 500 / 1000<br />Likes: 1000 / 5000<br />Comments
+              </p>
+              <button class="btn btn-custom ig-btn">See Details</button>
+            </div>
+          </div>
+
+          <!-- Facebook -->
+          <div class="col-md-3">
+            <div class="package-card text-center">
+              <div class="icon-circle fb-icon">
+                <i class="fa-brands fa-square-facebook"></i>
+              </div>
+              <h5 class="mb-3 text-white">Facebook</h5>
+              <p class="text-white-50">
+                Post Likes<br />Page Likes<br />Comments<br />Group Members: Up
+                to 10000
+              </p>
+              <button class="btn btn-custom fb-btn">See Details</button>
+            </div>
+          </div>
+
+          <!-- YouTube -->
+          <div class="col-md-3">
+            <div class="package-card text-center">
+              <div class="icon-circle yt-icon">
+                <i class="fa-brands fa-square-youtube"></i>
+              </div>
+              <h5 class="mb-3 text-white">YouTube</h5>
+              <p class="text-white-50">
+                Subscribers<br />Likes<br />Comments<br />Views
+              </p>
+              <button class="btn btn-custom yt-btn">See Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="about-section py-5 position-relative"
+      style="background-color: #000">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <h1 class="text-dull mb-3">Our Story</h1>
+            <p class="lead text-white-50">
+              Crafting digital excellence since 2018
+            </p>
+          </div>
+        </div>
+
+        <div class="row align-items-center g-5">
+          <!-- Image Column -->
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="position-relative">
+              <div class="rounded-4 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Our Team"
+                  class="img-fluid w-100"
+                  style="min-height: 400px; object-fit: cover" />
+              </div>
+              <div
+                class="position-absolute bottom-0 start-0 p-4 bg-dark bg-opacity-75 rounded-tr-4">
+                <h3 class="text-white mb-0">7+ Years Experience</h3>
+                <p class="text-white-50 mb-0">In digital innovation</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Column -->
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="ps-lg-4">
+              <h2 class="text-white mb-4">Who We Are</h2>
+              <p class="text-white-50 mb-4">
+                ARCHERS is a premier digital agency specializing in cutting-edge
+                media and technology solutions. Founded in 2018, we've grown
+                from a small creative studio to a full-service digital
+                powerhouse.
+              </p>
+
+              <div class="mb-4">
+                <div class="d-flex align-items-start mb-3">
+                  <div class="me-3 text-primary">
+                    <i class="fas fa-bullseye fa-lg"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-white mb-2">Our Mission</h5>
+                    <p class="text-white-50 mb-0">
+                      To empower businesses through innovative digital solutions
+                      that drive growth and create meaningful connections.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-start mb-3">
+                  <div class="me-3 text-primary">
+                    <i class="fas fa-eye fa-lg"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-white mb-2">Our Vision</h5>
+                    <p class="text-white-50 mb-0">
+                      To be the most trusted partner for businesses navigating
+                      the digital landscape.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stats -->
+              <div class="row g-4 mt-4">
+                <div class="col-6">
+                  <div
+                    class="text-center p-3 rounded-3"
+                    style="background-color: rgba(255, 255, 255, 0.05)">
+                    <h3 class="text-primary mb-1">150+</h3>
+                    <p class="text-white-50 mb-0">Projects Completed</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div
+                    class="text-center p-3 rounded-3"
+                    style="background-color: rgba(255, 255, 255, 0.05)">
+                    <h3 class="text-primary mb-1">95%</h3>
+                    <p class="text-white-50 mb-0">Client Retention</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div
+                    class="text-center p-3 rounded-3"
+                    style="background-color: rgba(255, 255, 255, 0.05)">
+                    <h3 class="text-primary mb-1">25+</h3>
+                    <p class="text-white-50 mb-0">Team Members</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div
+                    class="text-center p-3 rounded-3"
+                    style="background-color: rgba(255, 255, 255, 0.05)">
+                    <h3 class="text-primary mb-1">10+</h3>
+                    <p class="text-white-50 mb-0">Industries Served</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Background Elements -->
+      <div
+        class="position-absolute top-0 end-0 w-50 h-100 d-none d-lg-block"
+        style="z-index: -1; opacity: 0.05">
+        <span
+          class="text-dull"
+          style="
+            font-size: 25vw;
+            line-height: 1;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+          "
+          >ARCHERS</span
+        >
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="contact-section py-5"
+      style="background-color: #000">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mb-5">
+            <h1 class="text-dull mb-3">Get In Touch</h1>
+            <p class="lead text-white-50">
+              Have a project in mind or want to learn more about our services?
+              Reach out to us!
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Contact Form -->
+          <div class="col-lg-6" data-aos="fade-right">
+            <div
+              class="card border-0 shadow-sm h-100"
+              style="
+                background-color: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
+              ">
+              <div class="card-body p-4 p-md-5">
+                <form id="contactForm">
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control bg-transparent text-white border-secondary"
+                          id="name"
+                          placeholder="Your Name"
+                          required />
+                        <label for="name" class="text-white-50"
+                          >Your Name</label
+                        >
+                      </div>
+                    </div>
+                    <!-- <div class="col-md-6 mb-4">
+                      <div class="form-floating">
+                        <input
+                          type="email"
+                          class="form-control bg-transparent text-white border-secondary"
+                          id="email"
+                          placeholder="Your Email"
+                          required />
+                        <label for="email" class="text-white-50"
+                          >Your Email</label
+                        >
+                      </div>
+                    </div> -->
+                  </div>
+                  <div class="mb-4">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control bg-transparent text-white border-secondary"
+                        id="subject"
+                        placeholder="Subject" />
+                      <label for="subject" class="text-white-50">Subject</label>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control bg-transparent text-white border-secondary"
+                        id="message"
+                        placeholder="Your Message"
+                        style="height: 150px"
+                        required></textarea>
+                      <label for="message" class="text-white-50"
+                        >Your Message</label
+                      >
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-lg btn-rounded px-4">
+                      <i class="fas fa-paper-plane me-2"></i> Send Message
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-lg-6" data-aos="fade-left">
+            <div
+              class="card border-0 shadow-sm h-100"
+              style="
+                background-color: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
+              ">
+              <div class="card-body p-4 p-md-5">
+                <div class="mb-5">
+                  <h4 class="text-white mb-4">Contact Information</h4>
+                  <div class="d-flex align-items-start mb-4">
+                    <div class="me-3 mt-1 text-primary">
+                      <i class="fas fa-map-marker-alt fa-lg"></i>
+                    </div>
+                    <div>
+                      <h5 class="text-white mb-1">Our Location</h5>
+                      <p class="text-white-50 mb-0">
+                        123 Business Avenue, City, Country
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start mb-4">
+                    <div class="me-3 mt-1 text-primary">
+                      <i class="fas fa-envelope fa-lg"></i>
+                    </div>
+                    <div>
+                      <h5 class="text-white mb-1">Email Us</h5>
+                      <p class="text-white-50 mb-0">info@al-ehsan.com</p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start mb-4">
+                    <div class="me-3 mt-1 text-primary">
+                      <i class="fas fa-phone-alt fa-lg"></i>
+                    </div>
+                    <div>
+                      <h5 class="text-white mb-1">Call Us</h5>
+                      <p class="text-white-50 mb-0">+1 (234) 567-8900</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <h4 class="text-white mb-4">Business Hours</h4>
+                  <ul class="list-unstyled text-white-50">
+                    <li
+                      class="d-flex justify-content-between py-2 border-bottom border-secondary">
+                      <span>Monday - Friday</span>
+                      <span>9:00 AM - 6:00 PM</span>
+                    </li>
+                    <li
+                      class="d-flex justify-content-between py-2 border-bottom border-secondary">
+                      <span>Saturday</span>
+                      <span>10:00 AM - 4:00 PM</span>
+                    </li>
+                    <li class="d-flex justify-content-between py-2">
+                      <span>Sunday</span>
+                      <span>Closed</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-5">
+                  <h4 class="text-white mb-4">Follow Us</h4>
+                  <div class="d-flex justify-content-start">
+                    <a
+                      href="#"
+                      class="btn btn-outline-light btn-sm btn-rounded-circle me-2">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="btn btn-outline-light btn-sm btn-rounded-circle me-2">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="btn btn-outline-light btn-sm btn-rounded-circle me-2">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="btn btn-outline-light btn-sm btn-rounded-circle me-2">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="btn btn-outline-light btn-sm btn-rounded-circle">
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      /* Contact Section Styles */
+      .contact-section {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .contact-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+        opacity: 0.05;
+        pointer-events: none;
+      }
+
+      .btn-rounded-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+
+      .btn-rounded-circle:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .form-control {
+        color: white !important;
+        border-color: rgba(255, 255, 255, 0.2) !important;
+      }
+
+      .form-control:focus {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.4) !important;
+        box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+      }
+
+      .form-control::placeholder {
+        color: rgba(255, 255, 255, 0.5) !important;
+      }
+    </style>
+
+    <script>
+      // Form submission handling
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const subject = document.getElementById("subject").value;
+          const message = document.getElementById("message").value;
+
+          // Here you would typically send the data to your server
+          // For demonstration, we'll just show an alert
+          alert(
+            `Thank you, ${name}! Your message has been sent. We'll contact you soon at ${email}.`
+          );
+
+          // Reset form
+          this.reset();
+        });
+    </script>
+    <!-- Floating Earn With Us Banner -->
+    <div
+      id="earnBanner"
+      class="position-fixed bottom-0 start-0 m-4"
+      style="z-index: 9999; transition: all 0.3s ease">
+      <div
+        class="card border-0 shadow-lg"
+        style="
+          width: 300px;
+          background: linear-gradient(135deg, #1a1a1a, #333333);
+        ">
+        <div
+          class="card-header d-flex justify-content-between align-items-center py-2"
+          style="background: rgba(0, 0, 0, 0.3)">
+          <h3
+            style="
+              color: white;
+              margin: 0;
+              font-weight: 800;
+              font-size: 1.8rem;
+            ">
+            🚀 EARN CASH FOR CLICKS!
+          </h3>
+
+          <button
+            id="closeBanner"
+            class="btn btn-sm btn-link text-white p-0"
+            style="font-size: 1.25rem">
+            &times;
+          </button>
+        </div>
+        <div class="card-body p-3">
+          <p class="text-white-50 small mb-3">
+            Get ₹5-10 for every Like/Follow/Reviews/Subscribe!
+          </p>
+          <a
+            href="dashboard.html"
+            class="btn btn-primary btn-sm btn-block btn-rounded"
+            target="_blank">
+            Start →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      /* Banner Animation */
+      #earnBanner {
+        animation: floatBanner 3s ease-in-out infinite;
+      }
+
+      @keyframes floatBanner {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      /* Close Button Hover Effect */
+      #closeBanner:hover {
+        transform: scale(1.2);
+        color: #dc3545 !important;
+      }
+    </style>
+
+    <script>
+      // Close banner functionality
+      document
+        .getElementById("closeBanner")
+        .addEventListener("click", function () {
+          const banner = document.getElementById("earnBanner");
+          banner.style.transform = "translateY(100px)";
+          banner.style.opacity = "0";
+
+          // Remove banner from DOM after animation completes
+          setTimeout(() => {
+            banner.remove();
+
+            // Store in localStorage that user closed the banner
+            localStorage.setItem("earnBannerClosed", "true");
+          }, 300);
+        });
+
+      // Check if user previously closed the banner
+      // document.addEventListener("DOMContentLoaded", function () {
+      // if (localStorage.getItem("earnBannerClosed") === "true") {
+      // document.getElementById("earnBanner")?.remove(); }  } )
+      // ;
+    </script>
+    <!-- Floating Chatbot Button -->
+    <div id="chatbotButton" class="chatbot-button">
+      <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <!-- Chatbot Interface -->
+    <div id="chatbotInterface" class="chatbot-interface">
+      <div class="chatbot-header">
+        <h5>Chat with Us</h5>
+        <button id="closeChatbot" class="close-chatbot">&times;</button>
+      </div>
+      <div class="chatbot-body">
+        <div id="chatbotMessages" class="chatbot-messages">
+          <div class="message bot-message">Hi! How can I assist you today?</div>
+        </div>
+        <div class="chatbot-input">
+          <input
+            type="text"
+            id="chatbotInput"
+            placeholder="Type your message..." />
+          <button id="sendChatbotMessage" class="send-chatbot-message">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Chatbot functionality
+      const chatbotButton = document.getElementById("chatbotButton");
+      const chatbotInterface = document.getElementById("chatbotInterface");
+      const closeChatbot = document.getElementById("closeChatbot");
+      const chatbotMessages = document.getElementById("chatbotMessages");
+      const chatbotInput = document.getElementById("chatbotInput");
+      const sendChatbotMessage = document.getElementById("sendChatbotMessage");
+
+      // Show chatbot interface
+      chatbotButton.addEventListener("click", () => {
+        chatbotInterface.style.display = "flex";
+      });
+
+      // Close chatbot interface
+      closeChatbot.addEventListener("click", () => {
+        chatbotInterface.style.display = "none";
+      });
+
+      // Send message
+      sendChatbotMessage.addEventListener("click", () => {
+        const userMessage = chatbotInput.value.trim();
+        if (userMessage) {
+          // Add user message to chat
+          const userMessageElement = document.createElement("div");
+          userMessageElement.className = "message user-message";
+          userMessageElement.textContent = userMessage;
+          chatbotMessages.appendChild(userMessageElement);
+
+          // Clear input
+          chatbotInput.value = "";
+
+          // Simulate bot response
+          setTimeout(() => {
+            const botMessageElement = document.createElement("div");
+            botMessageElement.className = "message bot-message";
+            botMessageElement.textContent = "Thank you for your message!";
+            chatbotMessages.appendChild(botMessageElement);
+
+            // Scroll to the bottom
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+          }, 1000);
+        }
+      });
+
+      // Send message on Enter key press
+      chatbotInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          sendChatbotMessage.click();
+        }
+      });
+    </script>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>&copy; 2025 ARCHERS, All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-end">
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="tc.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Auth Modal -->
+    <div
+      class="modal fade"
+      id="authModal"
+      tabindex="-1"
+      aria-labelledby="authModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-white rounded-4">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="authModalLabel">Welcome to Archers</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <!-- Sign In -->
+            <div class="col-md-6 border-end border-secondary pe-4">
+              <form id="registerForm">
+                <div class="mb-3">
+                  <label for="username" class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    required />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required />
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    required />
+                </div>
+                <button type="submit" class="btn btn-outline-light w-100 mt-2">
+                  Register
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

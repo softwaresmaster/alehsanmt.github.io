@@ -123,27 +123,6 @@ jQuery(document).ready(function ($) {
       $(this).hasClass("appear") ||
         (animatecounters(), $(this).addClass("appear"));
     });
-
-  /*======================
-	
-		03. Scroll to top
-	
-	========================*/
-
-  $(window).scroll(function () {
-    50 <= $(this).scrollTop()
-      ? $("#return-to-top").fadeIn(200)
-      : $("#return-to-top").fadeOut(200);
-  }),
-    $("#return-to-top").on("click", function () {
-      $("body,html").animate(
-        {
-          scrollTop: 0,
-        },
-        500
-      );
-    });
-
   /*======================
 	
 		04. Loading Screen
