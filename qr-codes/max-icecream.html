@@ -1,273 +1,721 @@
 ﻿<!DOCTYPE html>
-<html lang="en" class="no-js">
-  <!-- Start Head -->
-
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Syed Ehsan Ul Haq" />
-    <!-- description -->
     <meta
-      name="QR-Codes"
-      content="UI/UX, Web &amp; App development, Google Maps Location &amp; 360 Photos, Google Reviews, Graphic Designing, contact@alehsanmt.com for more" />
-    <!-- keywords -->
+      name="description"
+      content="Max Production House company profile - premium ice cream experience, menu highlights, social channels, and location details." />
     <meta
       name="keywords"
-      content="alehsanmt,sahdigitals,SAH Digitals,virtual tour,360 vr,vr 360, Al-Ehsan, graphic designer, Google Maps Location Services, Graphic Designer, Logo Design, Web Designer, UI/UX designer,360 Photos in Hyderabad, Google reviews, stamp design " />
-
-    <!--Start Title -->
-    <title>Max Production House | Ice Cream Parlour</title>
-    <!--End Title -->
-
-    <!-- Start Favicon -->
+      content="Max Production House, ice cream, parlour, desserts, Hyderabad, menu, company profile" />
+    <title>Max Production House | Ice Cream Experience</title>
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="icon" href="./images/max-logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Exo:wght@600;700&family=Abel&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet" />
-
-    <!-- Plugins -->
-    <link href="css\plugins.min.css" rel="stylesheet" />
-
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="/qr-codes/css/style2.css" />
-
-    <!-- Responsive -->
-    <link rel="stylesheet" href="css\responsive.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8tBTCoD8R4P9rQ+F6P6xYvYh+v5sVfQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
     <style>
-      @keyframes rotate {
-        100% {
-          transform: rotate(1turn);
+      :root {
+        --bg-main: #070b16;
+        --bg-card: rgba(255, 255, 255, 0.08);
+        --text-main: #eff3ff;
+        --text-soft: #c6d0ef;
+        --primary: #4f7cff;
+        --secondary: #0ac6d7;
+        --accent: #ff9f43;
+        --radius-lg: 24px;
+        --radius-md: 16px;
+        --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.35);
+        --space-1: 8px;
+        --space-2: 16px;
+        --space-3: 24px;
+        --space-4: 32px;
+        --space-5: 40px;
+        --space-6: 48px;
+        --space-7: 56px;
+        --space-8: 64px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: radial-gradient(circle at 15% 15%, #1b2c5d 0%, transparent 36%),
+          radial-gradient(circle at 82% 10%, #5f27cd 0%, transparent 34%),
+          linear-gradient(150deg, #070b16, #0d1330 40%, #0a142b 100%);
+        color: var(--text-main);
+        font-family: "Inter", Arial, sans-serif;
+        line-height: 1.6;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      .background-orb {
+        position: fixed;
+        width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        filter: blur(60px);
+        opacity: 0.22;
+        z-index: -1;
+        animation: drift 12s ease-in-out infinite alternate;
+      }
+
+      .background-orb.orb-a {
+        background: #00d2d3;
+        top: -120px;
+        right: -90px;
+      }
+
+      .background-orb.orb-b {
+        background: #ff9f43;
+        bottom: -140px;
+        left: -100px;
+      }
+
+      @keyframes drift {
+        from {
+          transform: translateY(-16px);
+        }
+        to {
+          transform: translateY(16px);
         }
       }
-      .rainbow-border {
+
+      .site-wrap {
+        width: min(1200px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: var(--space-6) 0 var(--space-8);
+      }
+
+      section {
+        margin-bottom: var(--space-8);
+      }
+
+      .hero {
+        display: grid;
+        gap: var(--space-4);
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-logo {
+        width: clamp(104px, 18vw, 160px);
+        margin: 0 auto;
+        border-radius: 50%;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .hero h1 {
+        font-family: "Exo", sans-serif;
+        font-size: clamp(2rem, 8vw, 4.5rem);
+        line-height: 1.1;
+        letter-spacing: 0.3px;
+      }
+
+      .gradient-word {
+        background: linear-gradient(120deg, var(--accent), #ffe181);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero p {
+        max-width: 700px;
+        margin: 0 auto;
+        color: var(--text-soft);
+        font-size: clamp(1rem, 2.4vw, 1.15rem);
+      }
+
+      .hero-cta,
+      .cta-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+        justify-content: center;
+      }
+
+      .glass-panel {
+        background: var(--bg-card);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(16px);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+        padding: var(--space-4);
+      }
+
+      .section-title {
+        font-family: "Exo", sans-serif;
+        font-size: clamp(1.6rem, 4vw, 2.4rem);
+        margin-bottom: var(--space-2);
+      }
+
+      .section-sub {
+        color: var(--text-soft);
+        margin-bottom: var(--space-4);
+      }
+
+      .about-grid {
+        display: grid;
+        gap: var(--space-3);
+      }
+
+      .about-image {
+        width: 100%;
+        border-radius: var(--radius-md);
+        object-fit: cover;
+        min-height: 260px;
+      }
+
+      .menu-title {
+        text-align: center;
+        margin-bottom: var(--space-4);
+      }
+
+      .menu-title h2 {
+        font-family: "Exo", sans-serif;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+      }
+
+      .menu-title .title-accent-1 {
+        color: #ff9f43;
+      }
+
+      .menu-title .title-accent-2 {
+        color: #0abde3;
+      }
+
+      .menu-title .title-accent-3 {
+        color: #ee5253;
+      }
+
+      .menu-title .title-accent-4 {
+        color: #00d2d3;
+      }
+
+      .menu-title .title-accent-5 {
+        color: #5f27cd;
+      }
+
+      .cards-grid {
+        display: grid;
+        gap: var(--space-4);
+        perspective: 1000px;
+      }
+
+      .menu-card {
+        text-align: center;
+        height: 360px;
+        border-radius: var(--radius-md);
+        padding: var(--space-3) var(--space-2);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        transform-style: preserve-3d;
+        transform: rotateX(75deg) translateY(-200px) translateZ(-100px);
+        transition: transform 0.6s ease, box-shadow 0.6s ease;
+      }
+
+      .menu-card:hover {
+        transform: rotateX(0deg) translateY(0) translateZ(0);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .menu-card img {
+        width: min(200px, 75%);
+        height: 130px;
+        object-fit: contain;
+        margin: 0 auto var(--space-2);
+        transform: translateY(6px);
+      }
+
+      .menu-card h3 {
+        font-family: "Abel", sans-serif;
+        font-size: 1.75rem;
+        color: #fff;
+        text-shadow: 0 0 2px rgba(255, 255, 255, 0.9);
+        margin-bottom: var(--space-2);
+      }
+
+      .menu-card p {
+        color: #f9f9ff;
+        font-family: "Abel", sans-serif;
+        font-size: 1.02rem;
+      }
+
+      .menu-card.card-1 {
+        background: linear-gradient(rgb(225, 150, 58), rgb(227, 144, 91));
+      }
+
+      .menu-card.card-2 {
+        background: linear-gradient(rgb(93, 94, 170), rgb(93, 66, 103));
+      }
+
+      .menu-card.card-3 {
+        background: linear-gradient(#ff5252, #b33939);
+      }
+
+      .map-shell iframe {
+        width: 100%;
+        min-height: 360px;
+        border: 0;
+        border-radius: var(--radius-md);
+      }
+
+      .social-grid {
+        display: grid;
+        gap: var(--space-2);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .social-grid .blob-btn {
+        width: 100%;
+        margin-bottom: 0;
+        padding: 14px 18px;
+      }
+
+      .social-grid .blob-btn i {
+        margin-right: var(--space-1);
+        transition: color 0.4s ease;
+      }
+
+      .brand-whatsapp {
+        --blob-color: #25d366;
+      }
+
+      .brand-instagram {
+        --blob-color: #e1306c;
+      }
+
+      .brand-instagram i {
+        background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .brand-facebook {
+        --blob-color: #1877f2;
+      }
+
+      .brand-linkedin {
+        --blob-color: #0a66c2;
+      }
+
+      .buttons {
+        margin-top: var(--space-2);
+        text-align: center;
+      }
+
+      .blob-btn {
         position: relative;
-        z-index: 0;
-        margin: 20px;
-        border-radius: 10px;
-        overflow: hidden;
-        padding: 2rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        padding: 16px 34px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        color: var(--blob-color, #0505a9);
+        font-size: 0.92rem;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        background-color: transparent;
+        border: 0;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: color 0.5s;
+        overflow: visible;
+      }
 
-        &::before {
-          content: "";
-          position: absolute;
-          z-index: -2;
-          left: -50%;
-          top: -50%;
-          width: 200%;
-          height: 200%;
-          background-color: transparent;
-          background-repeat: no-repeat;
-          background-position: 0 0;
-          background-image: conic-gradient(
-            transparent,
-            rgba(168, 239, 255, 1),
-            transparent 30%
-          );
-          animation: rotate 4s linear infinite;
+      .blob-btn::before {
+        content: "";
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid var(--blob-color, #0505a9);
+        border-radius: 30px;
+      }
+
+      .blob-btn::after {
+        content: "";
+        z-index: -2;
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s 0.2s;
+        border-radius: 30px;
+      }
+
+      .blob-btn:hover {
+        color: #fff;
+      }
+
+      .blob-btn:hover::after {
+        transition: all 0.3s;
+        left: 0;
+        top: 0;
+      }
+
+      .blob-btn__inner {
+        z-index: -1;
+        overflow: hidden;
+        position: absolute;
+        inset: 0;
+        border-radius: 30px;
+        background: #fff;
+      }
+
+      .blob-btn__blobs {
+        position: relative;
+        display: block;
+        height: 100%;
+        filter: url("#goo");
+      }
+
+      .blob-btn__blob {
+        position: absolute;
+        top: 2px;
+        width: 25%;
+        height: 100%;
+        background: var(--blob-color, #0505a9);
+        border-radius: 100%;
+        transform: translate3d(0, 150%, 0) scale(1.4);
+        transition: transform 0.45s;
+      }
+
+      .blob-btn__blob:nth-child(1) {
+        left: 0%;
+        transition-delay: 0s;
+      }
+      .blob-btn__blob:nth-child(2) {
+        left: 30%;
+        transition-delay: 0.08s;
+      }
+      .blob-btn__blob:nth-child(3) {
+        left: 60%;
+        transition-delay: 0.16s;
+      }
+      .blob-btn__blob:nth-child(4) {
+        left: 90%;
+        transition-delay: 0.24s;
+      }
+
+      .blob-btn:hover .blob-btn__blob {
+        transform: translateZ(0) scale(1.4);
+      }
+
+      .blob-btn.secondary {
+        --blob-color: #0ac6d7;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (min-width: 768px) {
+        .site-wrap {
+          width: min(1200px, calc(100% - 64px));
         }
 
-        &::after {
-          content: "";
-          position: absolute;
-          z-index: -1;
-          left: 6px;
-          top: 6px;
-          width: calc(100% - 12px);
-          height: calc(100% - 12px);
-          background: #001a26;
-          border-radius: 5px;
+        .about-grid {
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+        }
+
+        .cards-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .social-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
         }
       }
 
-      @keyframes opacityChange {
-        50% {
-          opacity: 0.5;
+      @media (min-width: 1024px) {
+        .hero {
+          min-height: 80vh;
         }
-        100% {
-          opacity: 1;
+
+        .cards-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1440px) {
+        .site-wrap {
+          width: min(1320px, calc(100% - 80px));
         }
       }
     </style>
   </head>
-  <!-- End Head -->
+  <body>
+    <div class="background-orb orb-a"></div>
+    <div class="background-orb orb-b"></div>
 
-  <!-- Main Body -->
-
-  <body class="hb-color">
-    <!-- Loading Screen -->
-    <div id="loader-wrapper">
-      <!-- Loading Image -->
-      <div class="loader-img">
-        <img src=".\images\max-logo.png" />
-      </div>
-      <div class="loader-section section-left"></div>
-      <div class="loader-section section-right"></div>
-    </div>
-
-    <!-- Off-Canvas Navigation -->
-    <div
-      id="offcanvas-nav"
-      data-uk-offcanvas="mode: push; overlay: true; esc-close: true;"></div>
-    <!-- End Off-Canvas Navigation -->
-
-    <!-- Featured Works-->
-    <div class="hb-color padding-top-bottom-50px">
-      <!-- Container -->
-      <div class="container">
-        <!-- Row -->
-        <div
-          class="row"
-          data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: > div ; delay: 150; repeat: false">
-          <!-- Column -->
-          <div
-            class="col-md-8 col-sm-12 col-xs-12 center-col text-center"
-            data-uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div ; delay: 50; repeat: false">
-            <!-- Brand name -->
-
-            <img
-              class="animate__flip"
-              src="./images/max-logo.png"
-              width="200px"
-              alt="Max Production House | Ice Cream" />
-            <h5 class="mt-4 font-dotted text-gradient-gold">
-              Max Production House
-            </h5>
-            <iframe
-              class="uk-lightbox-iframe mt-1"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15233.950073908874!2d78.5013163!3d17.3402587!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb990f17c346c9%3A0x9ff6fbbaff08cda1!2sMax%20Production%20House!5e0!3m2!1sen!2sin!4v1718477724365!5m2!1sen!2sin"
-              width="auto"
-              height="auto"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            <h5 class="mt-4 font-dotted text-gradient-gold">
-              New Max Ice Cream
-            </h5>
-            <iframe
-              class="uk-lightbox-iframe mt-1"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15233.946661857179!2d78.5014333!3d17.3402998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9874164d6d2d%3A0xa761c164f91b1c6c!2sNew%20Max%20Ice%20Cream!5e0!3m2!1sen!2sin!4v1718479707804!5m2!1sen!2sin"
-              width="auto"
-              height="auto"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            <!-- Separator -->
-            <div
-              class="separator width-30px center-col bottom-border border-2px border-color-gray-dark margin-top-bottom-30px sm-margin-left-right-auto"></div>
-            <!-- buttons -->
-            <div class="d-flex p-1 justify-content-center">
-              <a
-                href="tel:+919100007475"
-                class="btn btn-small border-radius-50 btn-white sm-display-table active"
-                role="button"
-                aria-pressed="true">
-                <i class="fa fa-phone"></i> Call us 9100007475
-              </a>
-            </div>
-            <div class="d-flex p-1 justify-content-center">
-              <a
-                href="https://api.whatsapp.com/send?phone=+919100007475&text=Hello"
-                class="btn btn-small border-radius-50 btn-white sm-display-table active"
-                role="button"
-                aria-pressed="true">
-                <i class="fab fa-whatsapp"></i> Message us on Whatsapp
-              </a>
-            </div>
-
-            <div class="d-flex p-1 justify-content-center">
-              <a
-                href="https://www.instagram.com/maxicekream"
-                class="btn btn-small border-radius-50 me-1 btn-white sm-display-table active"
-                role="button"
-                aria-pressed="true">
-                <i class="fab fa-instagram"></i> Follow us on Instagram
-              </a>
-            </div>
-
-            <div class="d-flex p-1 justify-content-center">
-              <a
-                href="https://g.page/r/CaHNCP-6-_afEAI/review"
-                class="btn btn-small border-radius-50 btn-white sm-display-table active"
-                role="button"
-                aria-pressed="true">
-                <i class="fab fa-google"></i> Review us on Google
-              </a>
-            </div>
-            <div class="d-flex p-1 justify-content-center">
-              <a
-                href="https://maps.app.goo.gl/ZYCzPPEPh4Z2fHMw5"
-                class="btn btn-small border-radius-50 btn-white sm-display-table active"
-                role="button"
-                aria-pressed="true">
-                <i class="fa fa-map-marker"></i> Reach on our Location
-              </a>
-            </div>
-          </div>
-          <!-- End Column -->
-        </div>
-        <div
-          class="separator width-30px center-col bottom-border border-2px border-color-gray-dark margin-top-bottom-30px sm-margin-left-right-auto"></div>
-        <div class="row">
-          <div class="center-col">
-            <a href="tel:+919100007475">
-              <i class="fa fa-phone mr-2"></i>Contact: +91 91000 07475</a
-            >
-          </div>
-        </div>
-        <!-- Seperator -->
-        <div
-          class="separator width-30px center-col bottom-border border-2px border-color-gray-dark margin-top-bottom-30px sm-margin-left-right-auto"></div>
-        <div class="row">
-          <div class="center-col">
-            <a class="p-2"><i class="fab fa-whatsapp"></i></a>
-
-            <a class="p-2"><i class="fab fa-instagram"></i></a>
-
-            <a class="p-2"><i class="fab fa-google"></i></a>
-          </div>
-        </div>
-        <!-- End Row -->
-      </div>
-      <!-- End Container -->
-    </div>
-
-    <div class="container">
-      <div class="text-center">
+    <main class="site-wrap">
+      <section class="hero reveal" id="home">
+        <img src="./images/max-logo.png" class="hero-logo" alt="Max Production House Logo" />
+        <h1>
+          Premium <span class="gradient-word">Ice Cream</span><br />
+          Crafted For Every Mood
+        </h1>
         <p>
-          Copyright © Mandi House, Designed by
-          <a href="alehsanmt.com">Al-Ehsan Media &amp; Tech.</a> All Rights
-          Reserved.
+          Max Production House blends signature flavors, modern ambiance, and warm service to
+          make every visit memorable.
         </p>
-      </div>
-    </div>
+        <div class="hero-cta">
+          <a class="blob-btn" href="tel:+919100007475" aria-label="Call Max Production House">
+            Call Now
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+          <a
+            class="blob-btn secondary"
+            href="https://api.whatsapp.com/send?phone=+919100007475&text=Hello"
+            aria-label="Message on WhatsApp">
+            Chat on WhatsApp
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+        </div>
+      </section>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <section class="glass-panel reveal" id="about">
+        <div class="about-grid">
+          <div>
+            <h2 class="section-title">About Max Production House</h2>
+            <p class="section-sub">
+              We are a local favorite bringing handcrafted scoops, seasonal specials, and a fresh
+              dessert experience to Hyderabad.
+            </p>
+            <p>
+              From family gatherings to evening cravings, our menu is designed to serve joy in
+              every bite. We focus on quality ingredients, vibrant presentation, and quick service.
+            </p>
+          </div>
+          <img
+            src="./images/max-logo.png"
+            class="about-image"
+            alt="Max ice cream highlight"
+            loading="lazy" />
+        </div>
+      </section>
 
-    <!-- Including page fragments-->
-    <script src="js/include.js"></script>
-    <!-- Retina Ready -->
-    <script src="js/plugins.min.js"></script>
+      <section class="reveal" id="services">
+        <div class="menu-title">
+          <h2>
+            <span class="title-accent-1">Ice</span><span class="title-accent-2"> Cream</span>
+            <span class="title-accent-3"> Menu</span>
+            <span class="title-accent-4"> Highl</span><span class="title-accent-5">ights</span>
+          </h2>
+        </div>
+        <div class="cards-grid">
+          <article class="menu-card card-1">
+            <img src="./images/max-logo.png" alt="Classic scoops menu" loading="lazy" />
+            <h3>Classic Scoops</h3>
+            <p>
+              Signature vanilla, chocolate, strawberry, and seasonal fruit scoops with rich
+              texture and authentic taste.
+            </p>
+          </article>
+          <article class="menu-card card-2">
+            <img src="./images/max-logo.png" alt="Premium sundaes menu" loading="lazy" />
+            <h3>Premium Sundaes</h3>
+            <p>
+              Loaded sundaes topped with nuts, sauces, wafers, and fresh add-ons for a premium
+              dessert moment.
+            </p>
+          </article>
+          <article class="menu-card card-3">
+            <img src="./images/max-logo.png" alt="Special combos menu" loading="lazy" />
+            <h3>Special Combos</h3>
+            <p>
+              Value-packed combos crafted for friends and families, with curated flavors and
+              indulgent toppings.
+            </p>
+          </article>
+        </div>
+      </section>
 
-    <!-- Custom Scripts -->
-    <script src="js/custom.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
-      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"></script>
+      <section class="glass-panel map-shell reveal" id="location">
+        <h2 class="section-title">Visit Our Location</h2>
+        <p class="section-sub">Find us in Hyderabad and experience desserts in a vibrant setting.</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15233.946661857179!2d78.5014333!3d17.3402998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9874164d6d2d%3A0xa761c164f91b1c6c!2sNew%20Max%20Ice%20Cream!5e0!3m2!1sen!2sin!4v1718479707804!5m2!1sen!2sin"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Max Production House location map"
+          allowfullscreen></iframe>
+      </section>
+
+      <section class="glass-panel reveal" id="contact">
+        <h2 class="section-title">Connect With Us</h2>
+        <p class="section-sub">Follow us and stay updated with offers, launches, and specials.</p>
+        <div class="social-grid">
+          <a
+            class="blob-btn brand-whatsapp"
+            href="https://api.whatsapp.com/send?phone=+919100007475&text=Hello"
+            aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+          <a
+            class="blob-btn brand-instagram"
+            href="https://www.instagram.com/maxicekream"
+            aria-label="Instagram">
+            <i class="fab fa-instagram"></i> Instagram
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+          <a
+            class="blob-btn brand-facebook"
+            href="https://www.facebook.com/"
+            aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i> Facebook
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+          <a
+            class="blob-btn brand-linkedin"
+            href="https://www.linkedin.com/"
+            aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="glass-panel reveal">
+        <h2 class="section-title">Ready For A Sweet Visit?</h2>
+        <p class="section-sub">
+          Book your order or reach us now for quick service and fresh dessert recommendations.
+        </p>
+        <div class="cta-buttons buttons">
+          <a class="blob-btn" href="tel:+919100007475" aria-label="Call to order">
+            Order by Phone
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+          <a
+            class="blob-btn secondary"
+            href="https://maps.app.goo.gl/ZYCzPPEPh4Z2fHMw5"
+            aria-label="Open map location">
+            Reach Our Location
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" aria-hidden="true">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+            result="goo"></feColorMatrix>
+          <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+        </filter>
+      </defs>
+    </svg>
+
+    <script>
+      const revealItems = document.querySelectorAll(".reveal");
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    </script>
   </body>
 </html>
