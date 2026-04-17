@@ -258,16 +258,29 @@
         font-size: 1.02rem;
       }
 
-      .menu-card.card-1 {
-        background: linear-gradient(rgb(225, 150, 58), rgb(227, 144, 91));
-      }
-
       .menu-card.card-2 {
         background: linear-gradient(rgb(93, 94, 170), rgb(93, 66, 103));
       }
 
       .menu-card.card-3 {
         background: linear-gradient(#ff5252, #b33939);
+      }
+
+      .menu-card.card-2,
+      .menu-card.card-3 {
+        height: auto;
+        min-height: 240px;
+        padding: var(--space-2);
+      }
+
+      .menu-card.card-2 img,
+      .menu-card.card-3 img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+        margin: 0;
+        transform: none;
       }
 
       .map-shell iframe {
@@ -466,7 +479,7 @@
         }
 
         .cards-grid {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
 
@@ -551,29 +564,17 @@
           </h2>
         </div>
         <div class="cards-grid">
-          <article class="menu-card card-1">
-            <img src="./images/max-logo.png" alt="Classic scoops menu" loading="lazy" />
-            <h3>Classic Scoops</h3>
-            <p>
-              Signature vanilla, chocolate, strawberry, and seasonal fruit scoops with rich
-              texture and authentic taste.
-            </p>
-          </article>
           <article class="menu-card card-2">
-            <img src="./images/max-logo.png" alt="Premium sundaes menu" loading="lazy" />
-            <h3>Premium Sundaes</h3>
-            <p>
-              Loaded sundaes topped with nuts, sauces, wafers, and fresh add-ons for a premium
-              dessert moment.
-            </p>
+            <img
+              src="./images/menu-1.jpeg"
+              alt="Max ice cream menu — scoops, sundaes, and specials"
+              loading="lazy" />
           </article>
           <article class="menu-card card-3">
-            <img src="./images/max-logo.png" alt="Special combos menu" loading="lazy" />
-            <h3>Special Combos</h3>
-            <p>
-              Value-packed combos crafted for friends and families, with curated flavors and
-              indulgent toppings.
-            </p>
+            <img
+              src="./images/menu-2.jpeg"
+              alt="Max ice cream menu — shakes, concepts, and more"
+              loading="lazy" />
           </article>
         </div>
       </section>
