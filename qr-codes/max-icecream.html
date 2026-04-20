@@ -483,6 +483,18 @@
         }
       }
 
+      @media (max-width: 767px) {
+        #services .menu-card:hover {
+          transform: rotateX(75deg) translateY(-200px) translateZ(-100px);
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        #services .menu-card.mobile-scroll-visible {
+          transform: rotateX(0deg) translateY(0) translateZ(0);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+      }
+
       @media (min-width: 1440px) {
         .site-wrap {
           width: min(1320px, calc(100% - 80px));
@@ -717,6 +729,25 @@
       );
 
       revealItems.forEach((item) => revealObserver.observe(item));
+
+      const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+      if (isMobile) {
+        const mobileMenuCards = document.querySelectorAll("#services .menu-card");
+        const mobileMenuObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("mobile-scroll-visible");
+                mobileMenuObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.35 }
+        );
+
+        mobileMenuCards.forEach((card) => mobileMenuObserver.observe(card));
+      }
     </script>
   </body>
 </html>
