@@ -12,7 +12,7 @@
       content="Max Production House, ice cream, parlour, desserts, Hyderabad, menu, company profile" />
     <title>Max Production House | Ice Cream Experience</title>
     <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="icon" href="./images/max-logo.png" type="image/x-icon" />
+    <link rel="icon" href="./images/max-icecream-logo.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -117,9 +117,11 @@
       }
 
       .hero-logo {
-        width: clamp(104px, 18vw, 160px);
+        width: clamp(140px, 24vw, 240px);
+        height: auto;
+        display: block;
         margin: 0 auto;
-        border-radius: 50%;
+        object-fit: contain;
         box-shadow: var(--shadow-lg);
       }
 
@@ -180,8 +182,10 @@
       .about-image {
         width: 100%;
         border-radius: var(--radius-md);
-        object-fit: cover;
-        min-height: 260px;
+        object-fit: contain;
+        max-height: 320px;
+        padding: var(--space-2);
+        background: rgba(255, 255, 255, 0.06);
       }
 
       .menu-title {
@@ -323,12 +327,12 @@
         color: transparent;
       }
 
-      .brand-facebook {
-        --blob-color: #1877f2;
+      .brand-google-maps {
+        --blob-color: #168532;
       }
 
-      .brand-linkedin {
-        --blob-color: #0a66c2;
+      .brand-google-reviews {
+        --blob-color: #ffe101;
       }
 
       .buttons {
@@ -508,7 +512,10 @@
 
     <main class="site-wrap">
       <section class="hero reveal" id="home">
-        <img src="./images/max-logo.png" class="hero-logo" alt="Max Production House Logo" />
+        <img
+          src="./images/max-icecream-logo.svg"
+          class="hero-logo"
+          alt="Max Production House Logo" />
         <h1>
           Premium <span class="gradient-word">Ice Cream</span><br />
           Crafted For Every Mood
@@ -560,7 +567,7 @@
             </p>
           </div>
           <img
-            src="./images/max-logo.png"
+            src="./images/max-icecream-logo.svg"
             class="about-image"
             alt="Max ice cream highlight"
             loading="lazy" />
@@ -622,7 +629,7 @@
           </a>
           <a
             class="blob-btn brand-instagram"
-            href="https://www.instagram.com/maxicekream"
+            href="https://www.instagram.com/max_food.products"
             aria-label="Instagram">
             <i class="fab fa-instagram"></i> Instagram
             <span class="blob-btn__inner">
@@ -635,10 +642,10 @@
             </span>
           </a>
           <a
-            class="blob-btn brand-facebook"
-            href="https://www.facebook.com/"
-            aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i> Facebook
+            class="blob-btn brand-google-maps"
+            href="https://maps.app.goo.gl/5MZtymzKV9BGBT1HA"
+            aria-label="Google Maps">
+            <i class="fab fa-google"></i> Visit us
             <span class="blob-btn__inner">
               <span class="blob-btn__blobs">
                 <span class="blob-btn__blob"></span>
@@ -649,10 +656,10 @@
             </span>
           </a>
           <a
-            class="blob-btn brand-linkedin"
-            href="https://www.linkedin.com/"
-            aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i> LinkedIn
+            class="blob-btn brand-google-reviews"
+            href="https://search.google.com/local/writereview?placeid=ChIJyUbDFw-ZyzsRoc0I_7r79p8"
+            aria-label="Google Reviews">
+            <i class="fab fa-star"></i> Rate us
             <span class="blob-btn__inner">
               <span class="blob-btn__blobs">
                 <span class="blob-btn__blob"></span>
